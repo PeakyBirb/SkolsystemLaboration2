@@ -46,11 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="IKurs.cs" />
+    <Compile Include="Kurs.cs" />
+    <Compile Include="Startsida.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Startsida.Designer.cs">
+      <DependentUpon>Startsida.cs</DependentUpon>
     </Compile>
     <Compile Include="IPerson.cs" />
     <Compile Include="Lärare.cs" />
@@ -67,6 +69,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Startsida.resx">
+      <DependentUpon>Startsida.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

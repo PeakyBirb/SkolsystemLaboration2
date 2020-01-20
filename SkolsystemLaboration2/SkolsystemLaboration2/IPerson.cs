@@ -8,5 +8,13 @@ namespace SkolsystemLaboration2
 {
     interface IPerson
     {
-    }
+		string Id { get; set; }
+		string Förnamn { get; set; }
+		string Efternamn { get; set; }
+		string Adress { get; set; }
+		string Telefonnummer { get; set; }
+		string Epost { get; set; }
+
+		
+	}
 }

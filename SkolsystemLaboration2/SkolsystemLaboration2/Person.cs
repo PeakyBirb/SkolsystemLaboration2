@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace SkolsystemLaboration2
 {
-    class Person : IPerson
+    abstract class Person : IPerson
     {
-        private string id;
+		private string id;
 
 		public string Id
 		{
 			get { return id; }
 			set { id = value; }
 		}
-		
+
 		private string förnamn;
 
 		public string Förnamn
@@ -23,7 +23,7 @@ namespace SkolsystemLaboration2
 			get { return förnamn; }
 			set { förnamn = value; }
 		}
-		
+
 		private string efternamn;
 
 		public string Efternamn
@@ -56,11 +56,11 @@ namespace SkolsystemLaboration2
 			set { epost = value; }
 		}
 
-		
 
-		public void SkapaAnvändare(string Id, string Förnamn, string Efternamn, string Adress, string telefon) 
-		{ 
-			
+
+		public void SkapaAnvändare(string Id, string Förnamn, string Efternamn, string Adress, string telefon)
+		{
+
 		}
 
 	}

@@ -17,6 +17,6 @@ namespace SkolsystemLaboration2
             Telefonnummer = telefonnummer;
             Epost = epost;
         }
-       
+       //Gör lista med studenter
     }
 }
