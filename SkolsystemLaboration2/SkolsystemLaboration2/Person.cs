@@ -9,52 +9,27 @@ namespace SkolsystemLaboration2
     abstract class Person : IPerson
     {
 		private string id;
+		public string Id { get; set; }
 
-		public string Id
-		{
-			get { return id; }
-			set { id = value; }
-		}
 
 		private string förnamn;
+		public string Förnamn { get; set; }
 
-		public string Förnamn
-		{
-			get { return förnamn; }
-			set { förnamn = value; }
-		}
 
 		private string efternamn;
+		public string Efternamn { get; set; }
 
-		public string Efternamn
-		{
-			get { return efternamn; }
-			set { efternamn = value; }
-		}
 
 		private string adress;
+		public string Adress { get; set; }
 
-		public string Adress
-		{
-			get { return adress; }
-			set { adress = value; }
-		}
 
 		private string telefonnummer;
+		public string Telefonnummer { get; set; }
 
-		public string Telefonnummer
-		{
-			get { return telefonnummer; }
-			set { telefonnummer = value; }
-		}
 
 		private string epost;
-
-		public string Epost
-		{
-			get { return epost; }
-			set { epost = value; }
-		}
+		public string Epost { get; set; }
 
 
 

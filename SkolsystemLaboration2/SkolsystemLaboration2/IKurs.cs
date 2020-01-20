@@ -10,6 +10,8 @@ namespace SkolsystemLaboration2
     {
         string KursID { get; set; }
 
+        string KursNamn { get; set; }
+
         List<Student> StudenterPåKurs { get; set; }
 
         List<Lärare> LärarePåKurs { get; set; }
