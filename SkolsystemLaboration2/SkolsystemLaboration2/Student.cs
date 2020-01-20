@@ -8,7 +8,10 @@ namespace SkolsystemLaboration2
 {
     class Student : Person
     {
-        
+        public Student(string id)
+        {
+            Id = id;
+        }
        
     }
 }

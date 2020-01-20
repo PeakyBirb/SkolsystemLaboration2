@@ -56,9 +56,12 @@ namespace SkolsystemLaboration2
 			set { epost = value; }
 		}
 
-		public void SkapaAnvändare() 
+		
+
+		public void SkapaAnvändare(string Id, string Förnamn, string Efternamn, string Adress, string telefon) 
 		{ 
 			
 		}
+
 	}
 }
