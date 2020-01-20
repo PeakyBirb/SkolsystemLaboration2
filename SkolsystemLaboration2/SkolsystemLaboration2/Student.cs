@@ -8,9 +8,14 @@ namespace SkolsystemLaboration2
 {
     class Student : Person
     {
-        public Student(string id)
+        public Student(string id, string förnamn, string efternamn, string adress, string telefonnummer, string epost)
         {
             Id = id;
+            Förnamn = förnamn;
+            Efternamn = efternamn;
+            Adress = adress;
+            Telefonnummer = telefonnummer;
+            Epost = epost;
         }
        
     }
