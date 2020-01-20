@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace SkolsystemLaboration2
 {
-    class Kurs
+    class Kurs : IKurs
     {
+        public List<Student> StudenterPåKurs { get; set; }
 
-
-
-        //Lista med kurs
+        
     }
 }

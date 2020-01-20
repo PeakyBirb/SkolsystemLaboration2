@@ -8,7 +8,9 @@ namespace SkolsystemLaboration2
 {
     interface IKurs
     {
-		Student Student { get; set; }
+        List<Student> StudenterPåKurs { get; set; }
+
+
 
 	}
 }
