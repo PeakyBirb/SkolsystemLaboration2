@@ -8,9 +8,13 @@ namespace SkolsystemLaboration2
 {
     interface IKurs
     {
+        string KursID { get; set; }
+
         List<Student> StudenterPåKurs { get; set; }
 
+        List<Lärare> LärarePåKurs { get; set; }
 
+        List<Kurs> KursLista { get; set; }
 
 	}
 }
