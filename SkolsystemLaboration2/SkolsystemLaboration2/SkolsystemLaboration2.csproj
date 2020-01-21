@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IKurs.cs" />
+    <Compile Include="ILaborationsuppgift.cs" />
     <Compile Include="Kurs.cs" />
+    <Compile Include="Laborationsuppgift.cs" />
     <Compile Include="Startsida.cs">
       <SubType>Form</SubType>
     </Compile>
