@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace SkolsystemLaboration2
 {
-    class Laborationsuppgift : ILaborationsuppgift
+    interface ILärare
     {
-        
     }
 }

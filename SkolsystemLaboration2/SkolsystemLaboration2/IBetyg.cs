@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace SkolsystemLaboration2
 {
-    class Laborationsuppgift : ILaborationsuppgift
+    interface IBetyg
     {
+        string TilldelatBetyg { get; set; }
         
+        Kurs Kurs { get; set; }
+
+        Laborationsuppgift Laborationsuppgift { get; set; }
     }
 }

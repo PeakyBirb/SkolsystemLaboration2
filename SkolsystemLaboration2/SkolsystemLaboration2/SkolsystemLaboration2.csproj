@@ -46,8 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Betyg.cs" />
+    <Compile Include="IBetyg.cs" />
     <Compile Include="IKurs.cs" />
     <Compile Include="ILaborationsuppgift.cs" />
+    <Compile Include="ILärare.cs" />
+    <Compile Include="IStudent.cs" />
     <Compile Include="Kurs.cs" />
     <Compile Include="Laborationsuppgift.cs" />
     <Compile Include="Startsida.cs">
