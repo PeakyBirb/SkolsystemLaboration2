@@ -13,7 +13,7 @@ namespace SkolsystemLaboration2
 
         public Kurs Kurs { get; set; } 
         public Laborationsuppgift Laborationsuppgift { get; set; }
-
+        public Student Student { get; set; }
 
     }
 }

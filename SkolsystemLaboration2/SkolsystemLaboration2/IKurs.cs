@@ -17,6 +17,10 @@ namespace SkolsystemLaboration2
         List<Lärare> LärarePåKurs { get; set; }
 
         List<Kurs> KursLista { get; set; }
+        List<Betyg> BetygLista { get; set; }
+        List<Laborationsuppgift> LaborationsuppgiftLista { get; set; }
+
+
 
 	}
 }
