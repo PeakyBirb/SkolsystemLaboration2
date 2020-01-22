@@ -9,11 +9,21 @@ namespace SkolsystemLaboration2
     class Kurs : IKurs
     {
         private string kursID;
-        public string KursID { get; set; }
+        public string KursID
+        {
+            get { return kursID; }
+            set { KursID = value; }
+        }
 
 
         private string kursNamn;
-        public string KursNamn { get; set; }
+
+        public string KursNamn
+        {
+            get { return kursNamn; }
+            set { KursNamn = value; }
+        }
+
         
         
        
@@ -24,6 +34,12 @@ namespace SkolsystemLaboration2
         public List<Kurs> KursLista { get; set; }
         public List<Betyg> BetygLista { get; set; }
         public List<Laborationsuppgift> LaborationsuppgiftLista { get; set; }
+
+
+        public Kurs(string KursID, string KursNamn, List<Student> StudenterPåKurs, List<Lärare> LärarePåKurs)
+        {
+
+        }
 
     }
 }
