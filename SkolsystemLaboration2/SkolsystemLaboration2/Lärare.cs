@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace SkolsystemLaboration2
 {
-    class Lärare : Person
+    public class Lärare : Person
     {
-        public Lärare(string id, string förnamn, string efternamn, string adress, string telefonnummer, string epost)
+        public Lärare(string id, string förnamn, string efternamn)
         {
             Id = id;
             Förnamn = förnamn;
             Efternamn = efternamn;
-            Adress = adress;
-            Telefonnummer = telefonnummer;
-            Epost = epost;
+            
 
         }
         //Gör lista med lärare

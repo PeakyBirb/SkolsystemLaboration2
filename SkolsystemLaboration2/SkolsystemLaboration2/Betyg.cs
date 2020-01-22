@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SkolsystemLaboration2
 {
-    class Betyg : IBetyg
+    public class Betyg : IBetyg
     {
         private string tilldelatBetyg;
         public string TilldelatBetyg { get; set; }
@@ -15,5 +15,18 @@ namespace SkolsystemLaboration2
         public Laborationsuppgift Laborationsuppgift { get; set; }
         public Student Student { get; set; }
 
+
+        public Betyg(string tilldelatBetyg)
+        {
+            TilldelatBetyg = tilldelatBetyg;
+        }
+
+
+        public Betyg(Kurs kurs, Laborationsuppgift laborationsuppgift, Student student)
+        {
+            Kurs = kurs;
+            Laborationsuppgift = laborationsuppgift;
+            Student = student;
+        }
     }
 }

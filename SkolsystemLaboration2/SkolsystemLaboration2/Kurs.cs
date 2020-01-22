@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace SkolsystemLaboration2
 {
-    class Kurs : IKurs
+    public class Kurs : IKurs
     {
         private string kursID;
         public string KursID
         {
             get { return kursID; }
-            set { KursID = value; }
+            set { kursID = value; }
         }
 
 
@@ -21,7 +21,7 @@ namespace SkolsystemLaboration2
         public string KursNamn
         {
             get { return kursNamn; }
-            set { KursNamn = value; }
+            set { kursNamn = value; }
         }
 
         
@@ -36,8 +36,12 @@ namespace SkolsystemLaboration2
         public List<Laborationsuppgift> LaborationsuppgiftLista { get; set; }
 
 
-        public Kurs(string KursID, string KursNamn, List<Student> StudenterPåKurs, List<Lärare> LärarePåKurs)
+        public Kurs(string kursID, string kursNamn, List<Student> studenterPåKurs, List<Lärare> lärarePåKurs)
         {
+            KursID = kursID;
+            KursNamn = kursNamn;
+            StudenterPåKurs = studenterPåKurs;
+            LärarePåKurs = lärarePåKurs;
 
         }
 
