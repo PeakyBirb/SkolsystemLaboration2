@@ -83,7 +83,9 @@ namespace SkolsystemLaboration2
 
         private void KursDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
+            StudentDataGrid.DataSource = null;
+            StudentDataGrid.DataSource = ((Kurs)StudentDataGrid.CurrentRow.DataBoundItem).StudenterPåKurs;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

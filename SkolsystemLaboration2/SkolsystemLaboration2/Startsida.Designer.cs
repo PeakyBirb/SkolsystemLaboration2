@@ -29,14 +29,12 @@
         private void InitializeComponent()
         {
             this.LäggTillKurs = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.KursDataGrid = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.KursnamnTextbox = new System.Windows.Forms.TextBox();
             this.KursIDTextbox = new System.Windows.Forms.TextBox();
             this.StudentDataGrid = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.KursDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -49,14 +47,6 @@
             this.LäggTillKurs.TabIndex = 1;
             this.LäggTillKurs.Text = "Lägg till kurs";
             this.LäggTillKurs.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 293);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1017, 120);
-            this.dataGridView2.TabIndex = 3;
             // 
             // label1
             // 
@@ -120,13 +110,11 @@
             this.Controls.Add(this.KursnamnTextbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.KursDataGrid);
             this.Controls.Add(this.LäggTillKurs);
             this.Name = "Startsida";
             this.Text = "Välkommen";
             this.Load += new System.EventHandler(this.Startsida_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.KursDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGrid)).EndInit();
             this.ResumeLayout(false);
@@ -136,7 +124,6 @@
 
         #endregion
         private System.Windows.Forms.Button LäggTillKurs;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView KursDataGrid;
         private System.Windows.Forms.Label label2;
