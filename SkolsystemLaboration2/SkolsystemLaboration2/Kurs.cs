@@ -45,5 +45,10 @@ namespace SkolsystemLaboration2
 
         }
 
+        public List<Student> DeltagandeStudenterPåKurs()
+        {
+            return StudenterPåKurs;
+        }
+
     }
 }

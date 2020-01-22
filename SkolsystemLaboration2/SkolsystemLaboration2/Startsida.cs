@@ -28,7 +28,7 @@ namespace SkolsystemLaboration2
                 KursDataGrid.DataSource = null;
             KursDataGrid.DataSource = Kurser;
 
-
+            
 
 
         }
@@ -46,8 +46,9 @@ namespace SkolsystemLaboration2
             StudentLista.Add(new Student("005","Olof", "Malmberg"));
             StudentLista.Add(new Student("006","Nombi", "Komf"));
 
+            
+            
             List<Lärare> LärareLista = new List<Lärare>();
-
 
             LärareLista.Add(new Lärare("101","Alfons", "Svensson"));
             LärareLista.Add(new Lärare("102","Petter", "Sveni"));
@@ -83,9 +84,9 @@ namespace SkolsystemLaboration2
 
         private void KursDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
             StudentDataGrid.DataSource = null;
-            StudentDataGrid.DataSource = ((Kurs)StudentDataGrid.CurrentRow.DataBoundItem).StudenterPåKurs;
+            StudentDataGrid.DataSource = ((Kurs)StudentDataGrid.CurrentRow.DataBoundItem).DeltagandeStudenterPåKurs();
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
