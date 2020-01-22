@@ -19,18 +19,13 @@ namespace SkolsystemLaboration2
         {
             InitializeComponent();
             GenereraObjekt();
-            UpdateUI();
+            UppdateraKurser();
         }
 
-        public void UpdateUI()
+        public void UppdateraKurser()
         {
-            
-                KursDataGrid.DataSource = null;
+            KursDataGrid.DataSource = null;
             KursDataGrid.DataSource = Kurser;
-
-            
-
-
         }
 
         #region genereraobjekt
@@ -85,7 +80,20 @@ namespace SkolsystemLaboration2
         private void KursDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             StudentDataGrid.DataSource = null;
-            StudentDataGrid.DataSource = ((Kurs)StudentDataGrid.CurrentRow.DataBoundItem).DeltagandeStudenterPåKurs();
+
+            Kurs valdKurs = (Kurs)KursDataGrid.CurrentRow.DataBoundItem;
+            List<Student> valdKursStudentLista = valdKurs.StudenterPåKurs;
+
+            StudentDataGrid.DataSource = valdKursStudentLista;
+
+
+
+            LärareDataGrid.DataSource = null;
+
+            List<Lärare> valdKursLärareLista = valdKurs.LärarePåKurs;
+
+            LärareDataGrid.DataSource = valdKursLärareLista;
+
 
         }
 
