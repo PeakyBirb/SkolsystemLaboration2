@@ -8,5 +8,7 @@ namespace SkolsystemLaboration2
 {
     interface ILaborationsuppgift
     {
+        Kurs Kurs { get; set; }
+        List<Betyg> BetygLista { get; set; }
     }
 }

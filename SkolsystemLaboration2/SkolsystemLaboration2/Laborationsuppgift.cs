@@ -8,6 +8,7 @@ namespace SkolsystemLaboration2
 {
     class Laborationsuppgift : ILaborationsuppgift
     {
-        
+        public Kurs Kurs { get; set; }
+        public List<Betyg> BetygLista { get; set; }
     }
 }

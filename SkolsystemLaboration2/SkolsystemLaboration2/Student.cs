@@ -17,6 +17,10 @@ namespace SkolsystemLaboration2
             Telefonnummer = telefonnummer;
             Epost = epost;
         }
-       //Gör lista med studenter
+
+        public List<Betyg> BetygLista { get; set; }
+
+
+       //Gör lista med studenter(?)
     }
 }

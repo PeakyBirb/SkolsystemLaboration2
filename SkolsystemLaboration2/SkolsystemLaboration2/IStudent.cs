@@ -8,5 +8,6 @@ namespace SkolsystemLaboration2
 {
     interface IStudent
     {
+        List<Betyg> BetygLista { get; set; }
     }
 }
