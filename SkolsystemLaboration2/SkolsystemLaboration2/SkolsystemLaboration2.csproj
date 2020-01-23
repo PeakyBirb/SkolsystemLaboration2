@@ -54,12 +54,6 @@
     <Compile Include="IStudent.cs" />
     <Compile Include="Kurs.cs" />
     <Compile Include="Laborationsuppgift.cs" />
-    <Compile Include="NyKurs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NyKurs.Designer.cs">
-      <DependentUpon>NyKurs.cs</DependentUpon>
-    </Compile>
     <Compile Include="Startsida.cs">
       <SubType>Form</SubType>
     </Compile>
