@@ -144,9 +144,9 @@
             // LabDataGrid
             // 
             this.LabDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LabDataGrid.Location = new System.Drawing.Point(12, 329);
+            this.LabDataGrid.Location = new System.Drawing.Point(15, 329);
             this.LabDataGrid.Name = "LabDataGrid";
-            this.LabDataGrid.Size = new System.Drawing.Size(313, 150);
+            this.LabDataGrid.Size = new System.Drawing.Size(380, 150);
             this.LabDataGrid.TabIndex = 12;
             // 
             // label5
@@ -162,7 +162,7 @@
             // BetygDataGrid
             // 
             this.BetygDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BetygDataGrid.Location = new System.Drawing.Point(54, 591);
+            this.BetygDataGrid.Location = new System.Drawing.Point(525, 329);
             this.BetygDataGrid.Name = "BetygDataGrid";
             this.BetygDataGrid.Size = new System.Drawing.Size(366, 150);
             this.BetygDataGrid.TabIndex = 14;
@@ -170,9 +170,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(51, 575);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(522, 292);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 13);
+            this.label6.Size = new System.Drawing.Size(149, 16);
             this.label6.TabIndex = 15;
             this.label6.Text = "Alla betyg för Studenten";
             // 
@@ -180,7 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 801);
+            this.ClientSize = new System.Drawing.Size(919, 537);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BetygDataGrid);
             this.Controls.Add(this.label5);

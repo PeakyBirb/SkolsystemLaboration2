@@ -128,12 +128,13 @@ namespace SkolsystemLaboration2
 
         private void LäggTillKurs_Click(object sender, EventArgs e)
         {
-            Kurs kurs = new Kurs(KursIDTextbox.Text, KursnamnTextbox.Text);
+            Kurs kurs = new Kurs(KursIDTextbox.Text, KursnamnTextbox.Text, null, null);
             
             Kurser.Add(kurs);
             UppdateraDataGrid();
-            UppdateraStudentLärare();
             
+            NyKurs Form2 = new NyKurs();
+            Form2.Show();
 
         }
     }
