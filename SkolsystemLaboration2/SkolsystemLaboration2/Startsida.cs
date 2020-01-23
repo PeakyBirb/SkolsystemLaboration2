@@ -106,5 +106,25 @@ namespace SkolsystemLaboration2
         {
 
         }
+
+        private void KursIDTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KursnamnTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LäggTillKurs_Click(object sender, EventArgs e)
+        {
+            Kurs kurs = new Kurs();
+            kurs.KursID = KursIDTextbox.Text;
+            kurs.KursNamn = KursnamnTextbox.Text;
+
+            Kurs.Add(kurs)
+
+        }
     }
 }

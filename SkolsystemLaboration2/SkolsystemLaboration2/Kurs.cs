@@ -31,7 +31,6 @@ namespace SkolsystemLaboration2
         public List<Student> StudenterPåKurs { get; set; }
 
         public List<Lärare> LärarePåKurs { get; set; }
-        public List<Kurs> KursLista { get; set; }
         public List<Betyg> BetygLista { get; set; }
         public List<Laborationsuppgift> LaborationsuppgiftLista { get; set; }
 
