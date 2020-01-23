@@ -30,10 +30,8 @@ namespace SkolsystemLaboration2
         }
 
         public void UppdateraStudentLärare() 
-        {
+        {   
 
-            if (KursDataGrid.CurrentRow != null)
-            {
 
             StudentDataGrid.DataSource = null;
 
@@ -41,18 +39,14 @@ namespace SkolsystemLaboration2
             List<Student> valdKursStudentLista = valdKurs.StudenterPåKurs;
 
             StudentDataGrid.DataSource = valdKursStudentLista;
-            }
 
-            if (KursDataGrid.CurrentRow != null)
-            {
-                LärareDataGrid.DataSource = null;
-                Kurs valdKurs = (Kurs)KursDataGrid.CurrentRow.DataBoundItem;
-                List<Lärare> valdKursLärareLista = valdKurs.LärarePåKurs;
 
-                LärareDataGrid.DataSource = valdKursLärareLista;
-            }
-            KursDataGrid.DataSource = null;
-            KursDataGrid.DataSource = Kurser;
+
+            LärareDataGrid.DataSource = null;
+
+            List<Lärare> valdKursLärareLista = valdKurs.LärarePåKurs;
+
+            LärareDataGrid.DataSource = valdKursLärareLista;
         }
 
 
