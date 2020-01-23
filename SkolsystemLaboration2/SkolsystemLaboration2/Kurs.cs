@@ -35,11 +35,31 @@ namespace SkolsystemLaboration2
         public List<Laborationsuppgift> LaborationsuppgiftLista { get; set; }
 
 
+
         public Kurs(string kursID, string kursNamn, List<Student> studenterPåKurs, List<Lärare> lärarePåKurs)
         {
             KursID = kursID;
             KursNamn = kursNamn;
             StudenterPåKurs = studenterPåKurs;
+            LärarePåKurs = lärarePåKurs;
+        }
+
+        public Kurs(string kursID, string kursNamn)
+        {
+            KursID = kursID;
+            KursNamn = kursNamn;
+
+
+        }
+
+        public Kurs(List<Student> studenterPåKurs)
+        {
+            StudenterPåKurs = studenterPåKurs;
+
+        }
+
+        public Kurs(List<Lärare> lärarePåKurs)
+        {
             LärarePåKurs = lärarePåKurs;
 
         }

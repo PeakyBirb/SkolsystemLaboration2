@@ -19,14 +19,42 @@ namespace SkolsystemLaboration2
         {
             InitializeComponent();
             GenereraObjekt();
-            UppdateraKurser();
+            UppdateraDataGrid();
         }
 
-        public void UppdateraKurser()
+        public void UppdateraDataGrid()
         {
             KursDataGrid.DataSource = null;
             KursDataGrid.DataSource = Kurser;
+
         }
+
+        public void UppdateraStudentLärare() 
+        {
+
+            if (KursDataGrid.CurrentRow != null)
+            {
+
+            StudentDataGrid.DataSource = null;
+
+            Kurs valdKurs = (Kurs)KursDataGrid.CurrentRow.DataBoundItem;
+            List<Student> valdKursStudentLista = valdKurs.StudenterPåKurs;
+
+            StudentDataGrid.DataSource = valdKursStudentLista;
+            }
+
+            if (KursDataGrid.CurrentRow != null)
+            {
+                LärareDataGrid.DataSource = null;
+                Kurs valdKurs = (Kurs)KursDataGrid.CurrentRow.DataBoundItem;
+                List<Lärare> valdKursLärareLista = valdKurs.LärarePåKurs;
+
+                LärareDataGrid.DataSource = valdKursLärareLista;
+            }
+            KursDataGrid.DataSource = null;
+            KursDataGrid.DataSource = Kurser;
+        }
+
 
         #region genereraobjekt
         public void GenereraObjekt()
@@ -79,20 +107,7 @@ namespace SkolsystemLaboration2
 
         private void KursDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            StudentDataGrid.DataSource = null;
-
-            Kurs valdKurs = (Kurs)KursDataGrid.CurrentRow.DataBoundItem;
-            List<Student> valdKursStudentLista = valdKurs.StudenterPåKurs;
-
-            StudentDataGrid.DataSource = valdKursStudentLista;
-
-
-
-            LärareDataGrid.DataSource = null;
-
-            List<Lärare> valdKursLärareLista = valdKurs.LärarePåKurs;
-
-            LärareDataGrid.DataSource = valdKursLärareLista;
+            UppdateraStudentLärare();
 
 
         }
@@ -119,11 +134,12 @@ namespace SkolsystemLaboration2
 
         private void LäggTillKurs_Click(object sender, EventArgs e)
         {
-            Kurs kurs = new Kurs();
-            kurs.KursID = KursIDTextbox.Text;
-            kurs.KursNamn = KursnamnTextbox.Text;
-
-            Kurs.Add(kurs)
+            Kurs kurs = new Kurs(KursIDTextbox.Text, KursnamnTextbox.Text);
+            
+            Kurser.Add(kurs);
+            UppdateraDataGrid();
+            UppdateraStudentLärare();
+            
 
         }
     }
