@@ -63,8 +63,11 @@ namespace SkolsystemLaboration2
             StudentLista.Add(new Student("005","Olof", "Malmberg"));
             StudentLista.Add(new Student("006","Nombi", "Komf"));
 
-            
-            
+            List<Student> StudentLista2 = new List<Student>();
+            StudentLista2.Add(new Student("022", "Juh", "Iso"));
+            StudentLista2.Add(new Student("024", "Veralol", "Volol"));
+            StudentLista2.Add(new Student("025", "Solof", "Halmberg"));
+
             List<Lärare> LärareLista = new List<Lärare>();
 
             LärareLista.Add(new Lärare("101","Alfons", "Svensson"));
@@ -74,11 +77,19 @@ namespace SkolsystemLaboration2
             LärareLista.Add(new Lärare("105","Håkan", "Malmberg"));
             LärareLista.Add(new Lärare("106","Anders", "Komf"));
 
+            List<Lärare> LärareLista2 = new List<Lärare>();
+            LärareLista.Add(new Lärare("134", "Rister", "Lov"));
+            LärareLista.Add(new Lärare("145", "Åkan", "Handersson"));
+            LärareLista.Add(new Lärare("156", "Sanders", "Fomk"));
+
+
             Kurs kurs = new Kurs("01", "Systemutveckling 1", StudentLista, LärareLista);
+            Kurs kurs2 = new Kurs("01", "Systemutveckling 1", StudentLista2, LärareLista2);
 
 
             Kurser = new List<Kurs>();
             Kurser.Add(kurs);
+            Kurser.Add(kurs2);
 
 
 
