@@ -78,13 +78,13 @@ namespace SkolsystemLaboration2
             LärareLista.Add(new Lärare("106","Anders", "Komf"));
 
             List<Lärare> LärareLista2 = new List<Lärare>();
-            LärareLista.Add(new Lärare("134", "Rister", "Lov"));
-            LärareLista.Add(new Lärare("145", "Åkan", "Handersson"));
-            LärareLista.Add(new Lärare("156", "Sanders", "Fomk"));
+            LärareLista2.Add(new Lärare("134", "Rister", "Lov"));
+            LärareLista2.Add(new Lärare("145", "Åkan", "Handersson"));
+            LärareLista2.Add(new Lärare("156", "Sanders", "Fomk"));
 
 
             Kurs kurs = new Kurs("01", "Systemutveckling 1", StudentLista, LärareLista);
-            Kurs kurs2 = new Kurs("01", "Systemutveckling 1", StudentLista2, LärareLista2);
+            Kurs kurs2 = new Kurs("02", "Systemutveckling 2", StudentLista2, LärareLista2);
 
 
             Kurser = new List<Kurs>();
