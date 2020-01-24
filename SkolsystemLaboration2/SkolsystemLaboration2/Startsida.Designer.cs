@@ -30,7 +30,6 @@
         {
             this.LäggTillKurs = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.KursDataGrid = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.KursnamnTextbox = new System.Windows.Forms.TextBox();
             this.KursIDTextbox = new System.Windows.Forms.TextBox();
@@ -44,7 +43,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.StudentComboBox = new System.Windows.Forms.ComboBox();
             this.LäggTillStudentKnapp = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.KursDataGrid)).BeginInit();
+            this.KursListBox = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LärareDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LabDataGrid)).BeginInit();
@@ -53,7 +52,7 @@
             // 
             // LäggTillKurs
             // 
-            this.LäggTillKurs.Location = new System.Drawing.Point(178, 221);
+            this.LäggTillKurs.Location = new System.Drawing.Point(46, 182);
             this.LäggTillKurs.Name = "LäggTillKurs";
             this.LäggTillKurs.Size = new System.Drawing.Size(89, 26);
             this.LäggTillKurs.TabIndex = 1;
@@ -70,15 +69,6 @@
             this.label1.Size = new System.Drawing.Size(70, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "Kursnamn:";
-            // 
-            // KursDataGrid
-            // 
-            this.KursDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.KursDataGrid.Location = new System.Drawing.Point(15, 81);
-            this.KursDataGrid.Name = "KursDataGrid";
-            this.KursDataGrid.Size = new System.Drawing.Size(255, 123);
-            this.KursDataGrid.TabIndex = 2;
-            this.KursDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.KursDataGrid_CellContentClick);
             // 
             // label2
             // 
@@ -197,11 +187,21 @@
             this.LäggTillStudentKnapp.Text = "Lägg till student";
             this.LäggTillStudentKnapp.UseVisualStyleBackColor = true;
             // 
+            // KursListBox
+            // 
+            this.KursListBox.FormattingEnabled = true;
+            this.KursListBox.Location = new System.Drawing.Point(15, 81);
+            this.KursListBox.Name = "KursListBox";
+            this.KursListBox.Size = new System.Drawing.Size(120, 95);
+            this.KursListBox.TabIndex = 18;
+            this.KursListBox.SelectedIndexChanged += new System.EventHandler(this.KursListBox_SelectedIndexChanged);
+            // 
             // Startsida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 537);
+            this.Controls.Add(this.KursListBox);
             this.Controls.Add(this.LäggTillStudentKnapp);
             this.Controls.Add(this.StudentComboBox);
             this.Controls.Add(this.label6);
@@ -216,12 +216,10 @@
             this.Controls.Add(this.KursnamnTextbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.KursDataGrid);
             this.Controls.Add(this.LäggTillKurs);
             this.Name = "Startsida";
             this.Text = "Välkommen";
             this.Load += new System.EventHandler(this.Startsida_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.KursDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LärareDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LabDataGrid)).EndInit();
@@ -234,7 +232,6 @@
         #endregion
         private System.Windows.Forms.Button LäggTillKurs;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView KursDataGrid;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox KursnamnTextbox;
         private System.Windows.Forms.TextBox KursIDTextbox;
@@ -248,6 +245,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox StudentComboBox;
         private System.Windows.Forms.Button LäggTillStudentKnapp;
+        private System.Windows.Forms.ListBox KursListBox;
     }
 }
 

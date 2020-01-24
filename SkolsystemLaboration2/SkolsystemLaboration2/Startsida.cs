@@ -24,8 +24,10 @@ namespace SkolsystemLaboration2
 
         public void UppdateraDataGrid()
         {
-            KursDataGrid.DataSource = null;
-            KursDataGrid.DataSource = Kurser;
+            KursListBox.DataSource = null;
+            KursListBox.DataSource = Kurser;
+            KursListBox.ValueMember = "KursID";
+            KursListBox.DisplayMember = "KursNamn";
 
         }
 
@@ -33,20 +35,7 @@ namespace SkolsystemLaboration2
         {   
 
 
-            StudentDataGrid.DataSource = null;
-
-            Kurs valdKurs = (Kurs)KursDataGrid.CurrentRow.DataBoundItem;
-            List<Student> valdKursStudentLista = valdKurs.StudenterPåKurs;
-
-            StudentDataGrid.DataSource = valdKursStudentLista;
-
-
-
-            LärareDataGrid.DataSource = null;
-
-            List<Lärare> valdKursLärareLista = valdKurs.LärarePåKurs;
-
-            LärareDataGrid.DataSource = valdKursLärareLista;
+            
         }
 
 
@@ -112,7 +101,7 @@ namespace SkolsystemLaboration2
 
         private void KursDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            UppdateraStudentLärare();
+            
 
 
         }
@@ -156,6 +145,22 @@ namespace SkolsystemLaboration2
         private void StudentComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void KursListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            StudentDataGrid.DataSource = null;
+            Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
+            List<Student> valdKursStudentLista = valdKurs.StudenterPåKurs;
+
+            StudentDataGrid.DataSource = valdKursStudentLista;
+
+
+            LärareDataGrid.DataSource = null;
+            List<Lärare> valdKursLärareLista = valdKurs.LärarePåKurs;
+
+            LärareDataGrid.DataSource = valdKursLärareLista;
         }
     }
 }
