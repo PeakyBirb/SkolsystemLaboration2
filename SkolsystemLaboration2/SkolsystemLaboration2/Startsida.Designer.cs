@@ -42,6 +42,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.BetygDataGrid = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
+            this.StudentComboBox = new System.Windows.Forms.ComboBox();
+            this.LäggTillStudentKnapp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.KursDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LärareDataGrid)).BeginInit();
@@ -177,11 +179,31 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "Alla betyg för Studenten";
             // 
+            // StudentComboBox
+            // 
+            this.StudentComboBox.FormattingEnabled = true;
+            this.StudentComboBox.Location = new System.Drawing.Point(341, 226);
+            this.StudentComboBox.Name = "StudentComboBox";
+            this.StudentComboBox.Size = new System.Drawing.Size(121, 21);
+            this.StudentComboBox.TabIndex = 16;
+            this.StudentComboBox.SelectedIndexChanged += new System.EventHandler(this.StudentComboBox_SelectedIndexChanged);
+            // 
+            // LäggTillStudentKnapp
+            // 
+            this.LäggTillStudentKnapp.Location = new System.Drawing.Point(500, 222);
+            this.LäggTillStudentKnapp.Name = "LäggTillStudentKnapp";
+            this.LäggTillStudentKnapp.Size = new System.Drawing.Size(89, 26);
+            this.LäggTillStudentKnapp.TabIndex = 17;
+            this.LäggTillStudentKnapp.Text = "Lägg till student";
+            this.LäggTillStudentKnapp.UseVisualStyleBackColor = true;
+            // 
             // Startsida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 537);
+            this.Controls.Add(this.LäggTillStudentKnapp);
+            this.Controls.Add(this.StudentComboBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BetygDataGrid);
             this.Controls.Add(this.label5);
@@ -224,6 +246,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView BetygDataGrid;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox StudentComboBox;
+        private System.Windows.Forms.Button LäggTillStudentKnapp;
     }
 }
 

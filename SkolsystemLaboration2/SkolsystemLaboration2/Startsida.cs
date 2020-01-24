@@ -152,5 +152,10 @@ namespace SkolsystemLaboration2
             
 
         }
+
+        private void StudentComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
