@@ -84,13 +84,13 @@
             // 
             this.KursnamnTextbox.Location = new System.Drawing.Point(88, 44);
             this.KursnamnTextbox.Name = "KursnamnTextbox";
-            this.KursnamnTextbox.Size = new System.Drawing.Size(179, 20);
+            this.KursnamnTextbox.Size = new System.Drawing.Size(132, 20);
             this.KursnamnTextbox.TabIndex = 6;
             this.KursnamnTextbox.TextChanged += new System.EventHandler(this.KursnamnTextbox_TextChanged);
             // 
             // KursIDTextbox
             // 
-            this.KursIDTextbox.Location = new System.Drawing.Point(184, 18);
+            this.KursIDTextbox.Location = new System.Drawing.Point(137, 18);
             this.KursIDTextbox.Name = "KursIDTextbox";
             this.KursIDTextbox.Size = new System.Drawing.Size(83, 20);
             this.KursIDTextbox.TabIndex = 7;
@@ -99,9 +99,9 @@
             // StudentDataGrid
             // 
             this.StudentDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentDataGrid.Location = new System.Drawing.Point(341, 81);
+            this.StudentDataGrid.Location = new System.Drawing.Point(229, 28);
             this.StudentDataGrid.Name = "StudentDataGrid";
-            this.StudentDataGrid.Size = new System.Drawing.Size(248, 123);
+            this.StudentDataGrid.Size = new System.Drawing.Size(391, 123);
             this.StudentDataGrid.TabIndex = 8;
             this.StudentDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentDataGrid_CellContentClick);
             // 
@@ -109,7 +109,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(338, 48);
+            this.label3.Location = new System.Drawing.Point(226, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 16);
             this.label3.TabIndex = 9;
@@ -118,16 +118,17 @@
             // LärareDataGrid
             // 
             this.LärareDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LärareDataGrid.Location = new System.Drawing.Point(650, 81);
+            this.LärareDataGrid.Location = new System.Drawing.Point(643, 28);
             this.LärareDataGrid.Name = "LärareDataGrid";
-            this.LärareDataGrid.Size = new System.Drawing.Size(241, 123);
+            this.LärareDataGrid.Size = new System.Drawing.Size(370, 123);
             this.LärareDataGrid.TabIndex = 10;
+            this.LärareDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LärareDataGrid_CellContentClick);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(647, 48);
+            this.label4.Location = new System.Drawing.Point(640, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 16);
             this.label4.TabIndex = 11;
@@ -200,7 +201,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 537);
+            this.ClientSize = new System.Drawing.Size(1027, 518);
             this.Controls.Add(this.KursListBox);
             this.Controls.Add(this.LäggTillStudentKnapp);
             this.Controls.Add(this.StudentComboBox);

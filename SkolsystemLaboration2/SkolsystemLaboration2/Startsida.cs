@@ -19,24 +19,10 @@ namespace SkolsystemLaboration2
         {
             InitializeComponent();
             GenereraObjekt();
-            UppdateraDataGrid();
+            UppdateraKurser();
         }
 
-        public void UppdateraDataGrid()
-        {
-            KursListBox.DataSource = null;
-            KursListBox.DataSource = Kurser;
-            KursListBox.ValueMember = "KursID";
-            KursListBox.DisplayMember = "KursNamn";
 
-        }
-
-        public void UppdateraStudentLärare() 
-        {   
-
-
-            
-        }
 
 
         #region genereraobjekt
@@ -45,12 +31,12 @@ namespace SkolsystemLaboration2
             List<Student> StudentLista = new List<Student>();
 
 
-            StudentLista.Add(new Student("001","Lisa", "Svensson"));
-            StudentLista.Add(new Student("002","Korvi", "Sveni"));
-            StudentLista.Add(new Student("003","Nyr", "Lostuio"));
-            StudentLista.Add(new Student("004","Vera", "Vol"));
-            StudentLista.Add(new Student("005","Olof", "Malmberg"));
-            StudentLista.Add(new Student("006","Nombi", "Komf"));
+            StudentLista.Add(new Student("001", "Lisa", "Svensson"));
+            StudentLista.Add(new Student("002", "Korvi", "Sveni"));
+            StudentLista.Add(new Student("003", "Nyr", "Lostuio"));
+            StudentLista.Add(new Student("004", "Vera", "Vol"));
+            StudentLista.Add(new Student("005", "Olof", "Malmberg"));
+            StudentLista.Add(new Student("006", "Nombi", "Komf"));
 
             List<Student> StudentLista2 = new List<Student>();
             StudentLista2.Add(new Student("022", "Juh", "Iso"));
@@ -59,12 +45,12 @@ namespace SkolsystemLaboration2
 
             List<Lärare> LärareLista = new List<Lärare>();
 
-            LärareLista.Add(new Lärare("101","Alfons", "Svensson"));
-            LärareLista.Add(new Lärare("102","Petter", "Sveni"));
-            LärareLista.Add(new Lärare("103","Anna", "Lostuio"));
-            LärareLista.Add(new Lärare("104","Christer", "Vol"));
-            LärareLista.Add(new Lärare("105","Håkan", "Malmberg"));
-            LärareLista.Add(new Lärare("106","Anders", "Komf"));
+            LärareLista.Add(new Lärare("101", "Alfons", "Svensson"));
+            LärareLista.Add(new Lärare("102", "Petter", "Sveni"));
+            LärareLista.Add(new Lärare("103", "Anna", "Lostuio"));
+            LärareLista.Add(new Lärare("104", "Christer", "Vol"));
+            LärareLista.Add(new Lärare("105", "Håkan", "Malmberg"));
+            LärareLista.Add(new Lärare("106", "Anders", "Komf"));
 
             List<Lärare> LärareLista2 = new List<Lärare>();
             LärareLista2.Add(new Lärare("134", "Rister", "Lov"));
@@ -81,7 +67,6 @@ namespace SkolsystemLaboration2
             Kurser.Add(kurs2);
 
 
-
         }
         #endregion
         private void label1_Click(object sender, EventArgs e)
@@ -94,6 +79,14 @@ namespace SkolsystemLaboration2
 
         }
 
+        public void UppdateraKurser()
+        {
+            KursListBox.DataSource = null;
+            KursListBox.DataSource = Kurser;
+            KursListBox.ValueMember = "KursID";
+            KursListBox.DisplayMember = "KursNamn";
+
+        }
         private void Startsida_Load(object sender, EventArgs e)
         {
 
@@ -101,7 +94,7 @@ namespace SkolsystemLaboration2
 
         private void KursDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
 
 
         }
@@ -137,9 +130,11 @@ namespace SkolsystemLaboration2
             Kurs kurs = new Kurs(KursIDTextbox.Text, KursnamnTextbox.Text, StudentPåNyKurs, LärarePåNyKurs);
 
             Kurser.Add(kurs);
-            UppdateraDataGrid();
-            
 
+            KursListBox.DataSource = null;
+            KursListBox.DataSource = Kurser;
+            KursListBox.DisplayMember = "KursNamn";
+            KursListBox.ValueMember = "KursID";
         }
 
         private void StudentComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -149,18 +144,26 @@ namespace SkolsystemLaboration2
 
         private void KursListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (KursListBox.DataSource != null)
+            {
+                Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
+                List<Student> valdKursStudentLista = valdKurs.StudenterPåKurs;
+
+                StudentDataGrid.DataSource = valdKursStudentLista;
+
+
+                List<Lärare> valdKursLärareLista = valdKurs.LärarePåKurs;
+
+                LärareDataGrid.DataSource = valdKursLärareLista;
+            }
             
-            StudentDataGrid.DataSource = null;
-            Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
-            List<Student> valdKursStudentLista = valdKurs.StudenterPåKurs;
-
-            StudentDataGrid.DataSource = valdKursStudentLista;
 
 
-            LärareDataGrid.DataSource = null;
-            List<Lärare> valdKursLärareLista = valdKurs.LärarePåKurs;
+        }
 
-            LärareDataGrid.DataSource = valdKursLärareLista;
+        private void LärareDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
