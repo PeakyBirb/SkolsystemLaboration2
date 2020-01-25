@@ -105,7 +105,7 @@ namespace SkolsystemLaboration2
             Student valdStudent = (Student)StudentComboBox.SelectedItem;
             Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
 
-            //
+            //fastnat
 
         }
 
@@ -162,7 +162,7 @@ namespace SkolsystemLaboration2
 
         private void StudentComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LäggTillStudentPåKursFrånComboBox()
+            LäggTillStudentPåKursFrånComboBox();
         }
 
         private void KursListBox_SelectedIndexChanged(object sender, EventArgs e)
