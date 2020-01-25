@@ -187,6 +187,7 @@
             this.LäggTillStudentKnapp.TabIndex = 17;
             this.LäggTillStudentKnapp.Text = "Lägg till student";
             this.LäggTillStudentKnapp.UseVisualStyleBackColor = true;
+            this.LäggTillStudentKnapp.Click += new System.EventHandler(this.LäggTillStudentKnapp_Click);
             // 
             // KursListBox
             // 

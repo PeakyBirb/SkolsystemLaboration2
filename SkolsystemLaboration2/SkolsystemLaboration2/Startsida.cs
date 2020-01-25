@@ -98,10 +98,17 @@ namespace SkolsystemLaboration2
 
             StudentComboBox.ValueMember = "Id";
             StudentComboBox.DisplayMember = "Förnamn";
- 
+        }
 
+        public void LäggTillStudentPåKursFrånComboBox()
+        {
+            Student valdStudent = (Student)StudentComboBox.SelectedItem;
+            Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
+
+            //
 
         }
+
 
         private void Startsida_Load(object sender, EventArgs e)
         {
@@ -155,7 +162,7 @@ namespace SkolsystemLaboration2
 
         private void StudentComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            LäggTillStudentPåKursFrånComboBox()
         }
 
         private void KursListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -178,6 +185,11 @@ namespace SkolsystemLaboration2
         }
 
         private void LärareDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void LäggTillStudentKnapp_Click(object sender, EventArgs e)
         {
 
         }
