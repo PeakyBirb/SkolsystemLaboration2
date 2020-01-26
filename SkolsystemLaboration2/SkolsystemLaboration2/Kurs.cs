@@ -24,9 +24,7 @@ namespace SkolsystemLaboration2
             set { kursNamn = value; }
         }
 
-        
-        
-       
+
 
         public List<Student> StudenterPåKurs { get; set; }
 

@@ -139,9 +139,9 @@
             // LabDataGrid
             // 
             this.LabDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LabDataGrid.Location = new System.Drawing.Point(15, 329);
+            this.LabDataGrid.Location = new System.Drawing.Point(15, 403);
             this.LabDataGrid.Name = "LabDataGrid";
-            this.LabDataGrid.Size = new System.Drawing.Size(380, 150);
+            this.LabDataGrid.Size = new System.Drawing.Size(281, 76);
             this.LabDataGrid.TabIndex = 12;
             // 
             // label5
