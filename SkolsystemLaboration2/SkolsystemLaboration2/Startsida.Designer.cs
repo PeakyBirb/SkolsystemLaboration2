@@ -42,8 +42,10 @@
             this.BetygDataGrid = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.StudentComboBox = new System.Windows.Forms.ComboBox();
-            this.LäggTillStudentKnapp = new System.Windows.Forms.Button();
             this.KursListBox = new System.Windows.Forms.ListBox();
+            this.LärareComboBox = new System.Windows.Forms.ComboBox();
+            this.LäggTillStudent = new System.Windows.Forms.Button();
+            this.LäggTillLärare = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LärareDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LabDataGrid)).BeginInit();
@@ -173,21 +175,11 @@
             // StudentComboBox
             // 
             this.StudentComboBox.FormattingEnabled = true;
-            this.StudentComboBox.Location = new System.Drawing.Point(341, 226);
+            this.StudentComboBox.Location = new System.Drawing.Point(328, 182);
             this.StudentComboBox.Name = "StudentComboBox";
             this.StudentComboBox.Size = new System.Drawing.Size(121, 21);
             this.StudentComboBox.TabIndex = 16;
             this.StudentComboBox.SelectedIndexChanged += new System.EventHandler(this.StudentComboBox_SelectedIndexChanged);
-            // 
-            // LäggTillStudentKnapp
-            // 
-            this.LäggTillStudentKnapp.Location = new System.Drawing.Point(500, 222);
-            this.LäggTillStudentKnapp.Name = "LäggTillStudentKnapp";
-            this.LäggTillStudentKnapp.Size = new System.Drawing.Size(89, 26);
-            this.LäggTillStudentKnapp.TabIndex = 17;
-            this.LäggTillStudentKnapp.Text = "Lägg till student";
-            this.LäggTillStudentKnapp.UseVisualStyleBackColor = true;
-            this.LäggTillStudentKnapp.Click += new System.EventHandler(this.LäggTillStudentKnapp_Click);
             // 
             // KursListBox
             // 
@@ -198,13 +190,44 @@
             this.KursListBox.TabIndex = 18;
             this.KursListBox.SelectedIndexChanged += new System.EventHandler(this.KursListBox_SelectedIndexChanged);
             // 
+            // LärareComboBox
+            // 
+            this.LärareComboBox.FormattingEnabled = true;
+            this.LärareComboBox.Location = new System.Drawing.Point(724, 182);
+            this.LärareComboBox.Name = "LärareComboBox";
+            this.LärareComboBox.Size = new System.Drawing.Size(121, 21);
+            this.LärareComboBox.TabIndex = 19;
+            this.LärareComboBox.SelectedIndexChanged += new System.EventHandler(this.LärareComboBox_SelectedIndexChanged);
+            // 
+            // LäggTillStudent
+            // 
+            this.LäggTillStudent.Location = new System.Drawing.Point(472, 178);
+            this.LäggTillStudent.Name = "LäggTillStudent";
+            this.LäggTillStudent.Size = new System.Drawing.Size(89, 26);
+            this.LäggTillStudent.TabIndex = 20;
+            this.LäggTillStudent.Text = "Lägg till";
+            this.LäggTillStudent.UseVisualStyleBackColor = true;
+            this.LäggTillStudent.Click += new System.EventHandler(this.LäggTillStudent_Click);
+            // 
+            // LäggTillLärare
+            // 
+            this.LäggTillLärare.Location = new System.Drawing.Point(864, 177);
+            this.LäggTillLärare.Name = "LäggTillLärare";
+            this.LäggTillLärare.Size = new System.Drawing.Size(89, 26);
+            this.LäggTillLärare.TabIndex = 21;
+            this.LäggTillLärare.Text = "Lägg till";
+            this.LäggTillLärare.UseVisualStyleBackColor = true;
+            this.LäggTillLärare.Click += new System.EventHandler(this.LäggTillLärare_Click);
+            // 
             // Startsida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1027, 518);
+            this.Controls.Add(this.LäggTillLärare);
+            this.Controls.Add(this.LäggTillStudent);
+            this.Controls.Add(this.LärareComboBox);
             this.Controls.Add(this.KursListBox);
-            this.Controls.Add(this.LäggTillStudentKnapp);
             this.Controls.Add(this.StudentComboBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BetygDataGrid);
@@ -246,8 +269,10 @@
         private System.Windows.Forms.DataGridView BetygDataGrid;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox StudentComboBox;
-        private System.Windows.Forms.Button LäggTillStudentKnapp;
         private System.Windows.Forms.ListBox KursListBox;
+        private System.Windows.Forms.ComboBox LärareComboBox;
+        private System.Windows.Forms.Button LäggTillStudent;
+        private System.Windows.Forms.Button LäggTillLärare;
     }
 }
 

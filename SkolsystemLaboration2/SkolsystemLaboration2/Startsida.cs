@@ -130,14 +130,58 @@ namespace SkolsystemLaboration2
             StudentDataGrid.DataSource = null;
             StudentDataGrid.DataSource = valdKurs.StudenterPåKurs;
            
-            //fastnat
+        }
+
+        public void FyllLärareComboBox()
+        {
+            Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
+            List<Lärare> valdKursLärarLista = new List<Lärare>();
+
+            foreach (var item in Kurser)
+            {
+                foreach (var item2 in item.LärarePåKurs)
+                {
+                    valdKursLärarLista.Add(item2);
+                }
+            }
+
+
+            LärareComboBox.DataSource = valdKursLärarLista;
+            LärareComboBox.ValueMember = "Id";
+            LärareComboBox.DisplayMember = "Förnamn";
+        }
+
+        public void LäggTillLärarePåKursFrånComboBox()
+        {
+            Lärare valdLärare = (Lärare)LärareComboBox.SelectedItem;
+            Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
+            List<Lärare> valdaLärare = valdKurs.LärarePåKurs;
+
+            if (valdaLärare != null)
+            {
+                valdaLärare.Add(valdLärare);
+                valdKurs.LärarePåKurs = valdaLärare;
+            }
+            else
+            {
+                List<Lärare> nyLärarLista = new List<Lärare>();
+                nyLärarLista.Add(valdLärare);
+                valdKurs.LärarePåKurs = nyLärarLista;
+            }
+
+            LärareDataGrid.DataSource = null;
+            LärareDataGrid.DataSource = valdKurs.LärarePåKurs;
 
         }
+
+
 
 
         private void Startsida_Load(object sender, EventArgs e)
         {
             FyllStudentComboBox();
+            FyllLärareComboBox();
+
         }
 
         private void KursDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -187,7 +231,7 @@ namespace SkolsystemLaboration2
 
         private void StudentComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LäggTillStudentPåKursFrånComboBox();
+            
         }
 
         private void KursListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -217,6 +261,26 @@ namespace SkolsystemLaboration2
         private void LäggTillStudentKnapp_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LärareComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void LäggTillStudent_Click(object sender, EventArgs e)
+        {
+            LäggTillStudentPåKursFrånComboBox();
+        }
+
+        private void LäggTillLärare_Click(object sender, EventArgs e)
+        {
+            LäggTillLärarePåKursFrånComboBox();
         }
     }
 }
