@@ -181,6 +181,8 @@ namespace SkolsystemLaboration2
         public void LäggTillLaborationsuppgift()
         {
             Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
+            //
+
         }
 
         public void FyllLabDataGrid()
