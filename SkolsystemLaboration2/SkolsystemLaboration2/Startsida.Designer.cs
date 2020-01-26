@@ -145,9 +145,9 @@
             // LabDataGrid
             // 
             this.LabDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LabDataGrid.Location = new System.Drawing.Point(15, 458);
+            this.LabDataGrid.Location = new System.Drawing.Point(15, 452);
             this.LabDataGrid.Name = "LabDataGrid";
-            this.LabDataGrid.Size = new System.Drawing.Size(281, 76);
+            this.LabDataGrid.Size = new System.Drawing.Size(334, 175);
             this.LabDataGrid.TabIndex = 12;
             this.LabDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LabDataGrid_CellContentClick);
             // 
@@ -238,7 +238,7 @@
             // 
             // LabIDTextbox
             // 
-            this.LabIDTextbox.Location = new System.Drawing.Point(213, 346);
+            this.LabIDTextbox.Location = new System.Drawing.Point(266, 349);
             this.LabIDTextbox.Name = "LabIDTextbox";
             this.LabIDTextbox.Size = new System.Drawing.Size(83, 20);
             this.LabIDTextbox.TabIndex = 23;
@@ -255,7 +255,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(145, 381);
+            this.textBox1.Location = new System.Drawing.Point(198, 381);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(151, 20);
             this.textBox1.TabIndex = 25;
@@ -270,7 +270,7 @@
             // 
             // LäggTillLabb
             // 
-            this.LäggTillLabb.Location = new System.Drawing.Point(207, 416);
+            this.LäggTillLabb.Location = new System.Drawing.Point(260, 407);
             this.LäggTillLabb.Name = "LäggTillLabb";
             this.LäggTillLabb.Size = new System.Drawing.Size(89, 26);
             this.LäggTillLabb.TabIndex = 27;
@@ -282,7 +282,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 581);
+            this.ClientSize = new System.Drawing.Size(1087, 639);
             this.Controls.Add(this.LäggTillLabb);
             this.Controls.Add(this.StudentListBox);
             this.Controls.Add(this.textBox1);

@@ -69,6 +69,7 @@ namespace SkolsystemLaboration2
             List<Laborationsuppgift> Laborationslista = new List<Laborationsuppgift>();
             Laborationslista.Add(new Laborationsuppgift("l1","Programmeringens mystiska vidunder", kurs));
 
+            kurs.LaborationsuppgifterPåKurs = Laborationslista;
 
         }
         #endregion
@@ -263,8 +264,8 @@ namespace SkolsystemLaboration2
 
                 LärareDataGrid.DataSource = valdKursLärareLista;
             }
-            
 
+            FyllLabDataGrid();
 
         }
 
