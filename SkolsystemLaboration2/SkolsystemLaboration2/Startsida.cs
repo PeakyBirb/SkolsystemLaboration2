@@ -91,11 +91,18 @@ namespace SkolsystemLaboration2
         public void FyllStudentComboBox ()
         {   
             Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
-            List<Student> valdKursStudentLista = valdKurs.StudenterPåKurs;
+            List<Student> valdKursStudentLista = new List<Student>();
+
+            foreach (var item in Kurser)
+            {
+                foreach (var item2 in item.StudenterPåKurs)
+                {
+                    valdKursStudentLista.Add(item2);
+                }
+            }
             
+
             StudentComboBox.DataSource = valdKursStudentLista;
-
-
             StudentComboBox.ValueMember = "Id";
             StudentComboBox.DisplayMember = "Förnamn";
         }
@@ -104,7 +111,25 @@ namespace SkolsystemLaboration2
         {
             Student valdStudent = (Student)StudentComboBox.SelectedItem;
             Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
+            List<Student> valdaStudenter = valdKurs.StudenterPåKurs;
 
+            if (valdaStudenter != null)
+            {
+                valdaStudenter.Add(valdStudent);
+                valdKurs.StudenterPåKurs = valdaStudenter;
+            }
+            else
+            {
+                List<Student> nyStudentLista = new List<Student>();
+                nyStudentLista.Add(valdStudent);
+                valdKurs.StudenterPåKurs = nyStudentLista;
+            }
+            
+
+
+            StudentDataGrid.DataSource = null;
+            StudentDataGrid.DataSource = valdKurs.StudenterPåKurs;
+           
             //fastnat
 
         }
@@ -145,12 +170,12 @@ namespace SkolsystemLaboration2
         private void LäggTillKurs_Click(object sender, EventArgs e)
         {
             List<Student> StudentPåNyKurs = new List<Student>();
-            StudentPåNyKurs.Add(new Student("skriv ID", "skriv förnamn", "skriv efternamn"));
+            //StudentPåNyKurs.Add(new Student("skriv ID", "skriv förnamn", "skriv efternamn"));
 
             List<Lärare> LärarePåNyKurs = new List<Lärare>();
-            LärarePåNyKurs.Add(new Lärare("skriv ID", "skriv förnamn", "skriv efternamn"));
+            //LärarePåNyKurs.Add(new Lärare("skriv ID", "skriv förnamn", "skriv efternamn"));
 
-            Kurs kurs = new Kurs(KursIDTextbox.Text, KursnamnTextbox.Text, StudentPåNyKurs, LärarePåNyKurs);
+            Kurs kurs = new Kurs(KursIDTextbox.Text, KursnamnTextbox.Text, null, null);
 
             Kurser.Add(kurs);
 

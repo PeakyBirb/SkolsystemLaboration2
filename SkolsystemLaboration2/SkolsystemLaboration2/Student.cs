@@ -10,11 +10,6 @@ namespace SkolsystemLaboration2
     {
         
         
-        
-        
-        
-        
-        
         public Student(string id, string förnamn, string efternamn)
         {
             Id = id;
@@ -25,6 +20,10 @@ namespace SkolsystemLaboration2
 
         public List<Betyg> BetygLista { get; set; }
 
+        public string StudentFullName()
+        {
+            return Förnamn + " " + Efternamn;
+        }
 
        //Gör lista med studenter(?)
     }
