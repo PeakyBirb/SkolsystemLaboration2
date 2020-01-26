@@ -46,6 +46,12 @@
             this.LärareComboBox = new System.Windows.Forms.ComboBox();
             this.LäggTillStudent = new System.Windows.Forms.Button();
             this.LäggTillLärare = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.LabIDTextbox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.StudentListBox = new System.Windows.Forms.ListBox();
+            this.LäggTillLabb = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LärareDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LabDataGrid)).BeginInit();
@@ -54,7 +60,7 @@
             // 
             // LäggTillKurs
             // 
-            this.LäggTillKurs.Location = new System.Drawing.Point(46, 182);
+            this.LäggTillKurs.Location = new System.Drawing.Point(131, 235);
             this.LäggTillKurs.Name = "LäggTillKurs";
             this.LäggTillKurs.Size = new System.Drawing.Size(89, 26);
             this.LäggTillKurs.TabIndex = 1;
@@ -101,9 +107,9 @@
             // StudentDataGrid
             // 
             this.StudentDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentDataGrid.Location = new System.Drawing.Point(229, 28);
+            this.StudentDataGrid.Location = new System.Drawing.Point(251, 96);
             this.StudentDataGrid.Name = "StudentDataGrid";
-            this.StudentDataGrid.Size = new System.Drawing.Size(391, 123);
+            this.StudentDataGrid.Size = new System.Drawing.Size(391, 114);
             this.StudentDataGrid.TabIndex = 8;
             this.StudentDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentDataGrid_CellContentClick);
             // 
@@ -111,7 +117,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(226, 9);
+            this.label3.Location = new System.Drawing.Point(248, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 16);
             this.label3.TabIndex = 9;
@@ -120,9 +126,9 @@
             // LärareDataGrid
             // 
             this.LärareDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LärareDataGrid.Location = new System.Drawing.Point(643, 28);
+            this.LärareDataGrid.Location = new System.Drawing.Point(680, 96);
             this.LärareDataGrid.Name = "LärareDataGrid";
-            this.LärareDataGrid.Size = new System.Drawing.Size(370, 123);
+            this.LärareDataGrid.Size = new System.Drawing.Size(370, 114);
             this.LärareDataGrid.TabIndex = 10;
             this.LärareDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LärareDataGrid_CellContentClick);
             // 
@@ -130,7 +136,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(640, 9);
+            this.label4.Location = new System.Drawing.Point(677, 67);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 16);
             this.label4.TabIndex = 11;
@@ -139,34 +145,35 @@
             // LabDataGrid
             // 
             this.LabDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LabDataGrid.Location = new System.Drawing.Point(15, 403);
+            this.LabDataGrid.Location = new System.Drawing.Point(15, 458);
             this.LabDataGrid.Name = "LabDataGrid";
             this.LabDataGrid.Size = new System.Drawing.Size(281, 76);
             this.LabDataGrid.TabIndex = 12;
+            this.LabDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LabDataGrid_CellContentClick);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 292);
+            this.label5.Location = new System.Drawing.Point(12, 315);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 16);
+            this.label5.Size = new System.Drawing.Size(263, 16);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Laborationsuppgift";
+            this.label5.Text = "Skapa laborationsuppgift till vald kurs ovan";
             // 
             // BetygDataGrid
             // 
             this.BetygDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BetygDataGrid.Location = new System.Drawing.Point(525, 329);
+            this.BetygDataGrid.Location = new System.Drawing.Point(748, 376);
             this.BetygDataGrid.Name = "BetygDataGrid";
-            this.BetygDataGrid.Size = new System.Drawing.Size(366, 150);
+            this.BetygDataGrid.Size = new System.Drawing.Size(248, 152);
             this.BetygDataGrid.TabIndex = 14;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(522, 292);
+            this.label6.Location = new System.Drawing.Point(522, 315);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 16);
             this.label6.TabIndex = 15;
@@ -175,7 +182,7 @@
             // StudentComboBox
             // 
             this.StudentComboBox.FormattingEnabled = true;
-            this.StudentComboBox.Location = new System.Drawing.Point(328, 182);
+            this.StudentComboBox.Location = new System.Drawing.Point(334, 235);
             this.StudentComboBox.Name = "StudentComboBox";
             this.StudentComboBox.Size = new System.Drawing.Size(121, 21);
             this.StudentComboBox.TabIndex = 16;
@@ -184,16 +191,16 @@
             // KursListBox
             // 
             this.KursListBox.FormattingEnabled = true;
-            this.KursListBox.Location = new System.Drawing.Point(15, 81);
+            this.KursListBox.Location = new System.Drawing.Point(15, 102);
             this.KursListBox.Name = "KursListBox";
-            this.KursListBox.Size = new System.Drawing.Size(120, 95);
+            this.KursListBox.Size = new System.Drawing.Size(205, 108);
             this.KursListBox.TabIndex = 18;
             this.KursListBox.SelectedIndexChanged += new System.EventHandler(this.KursListBox_SelectedIndexChanged);
             // 
             // LärareComboBox
             // 
             this.LärareComboBox.FormattingEnabled = true;
-            this.LärareComboBox.Location = new System.Drawing.Point(724, 182);
+            this.LärareComboBox.Location = new System.Drawing.Point(737, 236);
             this.LärareComboBox.Name = "LärareComboBox";
             this.LärareComboBox.Size = new System.Drawing.Size(121, 21);
             this.LärareComboBox.TabIndex = 19;
@@ -201,7 +208,7 @@
             // 
             // LäggTillStudent
             // 
-            this.LäggTillStudent.Location = new System.Drawing.Point(472, 178);
+            this.LäggTillStudent.Location = new System.Drawing.Point(473, 231);
             this.LäggTillStudent.Name = "LäggTillStudent";
             this.LäggTillStudent.Size = new System.Drawing.Size(89, 26);
             this.LäggTillStudent.TabIndex = 20;
@@ -211,7 +218,7 @@
             // 
             // LäggTillLärare
             // 
-            this.LäggTillLärare.Location = new System.Drawing.Point(864, 177);
+            this.LäggTillLärare.Location = new System.Drawing.Point(876, 232);
             this.LäggTillLärare.Name = "LäggTillLärare";
             this.LäggTillLärare.Size = new System.Drawing.Size(89, 26);
             this.LäggTillLärare.TabIndex = 21;
@@ -219,11 +226,69 @@
             this.LäggTillLärare.UseVisualStyleBackColor = true;
             this.LäggTillLärare.Click += new System.EventHandler(this.LäggTillLärare_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(12, 350);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(95, 16);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "LaborationsID:";
+            // 
+            // LabIDTextbox
+            // 
+            this.LabIDTextbox.Location = new System.Drawing.Point(213, 346);
+            this.LabIDTextbox.Name = "LabIDTextbox";
+            this.LabIDTextbox.Size = new System.Drawing.Size(83, 20);
+            this.LabIDTextbox.TabIndex = 23;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 382);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(115, 16);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Laborationsnamn:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(145, 381);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(151, 20);
+            this.textBox1.TabIndex = 25;
+            // 
+            // StudentListBox
+            // 
+            this.StudentListBox.FormattingEnabled = true;
+            this.StudentListBox.Location = new System.Drawing.Point(525, 381);
+            this.StudentListBox.Name = "StudentListBox";
+            this.StudentListBox.Size = new System.Drawing.Size(174, 147);
+            this.StudentListBox.TabIndex = 26;
+            // 
+            // LäggTillLabb
+            // 
+            this.LäggTillLabb.Location = new System.Drawing.Point(207, 416);
+            this.LäggTillLabb.Name = "LäggTillLabb";
+            this.LäggTillLabb.Size = new System.Drawing.Size(89, 26);
+            this.LäggTillLabb.TabIndex = 27;
+            this.LäggTillLabb.Text = "Lägg till labb";
+            this.LäggTillLabb.UseVisualStyleBackColor = true;
+            this.LäggTillLabb.Click += new System.EventHandler(this.LäggTillLabb_Click);
+            // 
             // Startsida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 518);
+            this.ClientSize = new System.Drawing.Size(1087, 581);
+            this.Controls.Add(this.LäggTillLabb);
+            this.Controls.Add(this.StudentListBox);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.LabIDTextbox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.LäggTillLärare);
             this.Controls.Add(this.LäggTillStudent);
             this.Controls.Add(this.LärareComboBox);
@@ -273,6 +338,12 @@
         private System.Windows.Forms.ComboBox LärareComboBox;
         private System.Windows.Forms.Button LäggTillStudent;
         private System.Windows.Forms.Button LäggTillLärare;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox LabIDTextbox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListBox StudentListBox;
+        private System.Windows.Forms.Button LäggTillLabb;
     }
 }
 

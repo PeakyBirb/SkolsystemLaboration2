@@ -66,6 +66,9 @@ namespace SkolsystemLaboration2
             Kurser.Add(kurs);
             Kurser.Add(kurs2);
 
+            List<Laborationsuppgift> Laborationslista = new List<Laborationsuppgift>();
+            Laborationslista.Add(new Laborationsuppgift("l1","Programmeringens mystiska vidunder", kurs));
+
 
         }
         #endregion
@@ -88,8 +91,8 @@ namespace SkolsystemLaboration2
 
         }
 
-        public void FyllStudentComboBox ()
-        {   
+        public void FyllStudentComboBox()
+        {
             Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
             List<Student> valdKursStudentLista = new List<Student>();
 
@@ -100,7 +103,7 @@ namespace SkolsystemLaboration2
                     valdKursStudentLista.Add(item2);
                 }
             }
-            
+
 
             StudentComboBox.DataSource = valdKursStudentLista;
             StudentComboBox.ValueMember = "Id";
@@ -124,12 +127,12 @@ namespace SkolsystemLaboration2
                 nyStudentLista.Add(valdStudent);
                 valdKurs.StudenterPåKurs = nyStudentLista;
             }
-            
+
 
 
             StudentDataGrid.DataSource = null;
             StudentDataGrid.DataSource = valdKurs.StudenterPåKurs;
-           
+
         }
 
         public void FyllLärareComboBox()
@@ -174,6 +177,18 @@ namespace SkolsystemLaboration2
 
         }
 
+        public void LäggTillLaborationsuppgift()
+        {
+            Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
+        }
+
+        public void FyllLabDataGrid()
+        {
+            Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
+            LabDataGrid.DataSource = valdKurs.LaborationsuppgifterPåKurs;
+
+        }
+
 
 
 
@@ -181,7 +196,7 @@ namespace SkolsystemLaboration2
         {
             FyllStudentComboBox();
             FyllLärareComboBox();
-
+            FyllLabDataGrid();
         }
 
         private void KursDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -281,6 +296,16 @@ namespace SkolsystemLaboration2
         private void LäggTillLärare_Click(object sender, EventArgs e)
         {
             LäggTillLärarePåKursFrånComboBox();
+        }
+
+        private void LäggTillLabb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LabDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

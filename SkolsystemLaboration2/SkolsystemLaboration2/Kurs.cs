@@ -30,7 +30,7 @@ namespace SkolsystemLaboration2
 
         public List<Lärare> LärarePåKurs { get; set; }
         public List<Betyg> BetygLista { get; set; }
-        public List<Laborationsuppgift> LaborationsuppgiftLista { get; set; }
+        public List<Laborationsuppgift> LaborationsuppgifterPåKurs { get; set; }
 
 
 
@@ -42,13 +42,18 @@ namespace SkolsystemLaboration2
             LärarePåKurs = lärarePåKurs;
         }
 
-        public Kurs(string kursID, string kursNamn)
+        public Kurs(List<Laborationsuppgift> laborationsuppgifterPåKurs)
         {
-            KursID = kursID;
-            KursNamn = kursNamn;
-
-
+            LaborationsuppgifterPåKurs = laborationsuppgifterPåKurs;
         }
+
+        //public Kurs(string kursID, string kursNamn)
+        //{
+        //    KursID = kursID;
+        //    KursNamn = kursNamn;
+
+
+        //}
 
         public Kurs(List<Student> studenterPåKurs)
         {

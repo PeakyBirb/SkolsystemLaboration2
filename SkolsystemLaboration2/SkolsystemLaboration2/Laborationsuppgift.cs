@@ -24,8 +24,23 @@ namespace SkolsystemLaboration2
             set { labNamn = value; }
         }
 
-
         public Kurs Kurs { get; set; }
         public List<Betyg> BetygLista { get; set; }
+
+        public Laborationsuppgift(string labID, string labNamn, Kurs kurs, List<Betyg> betygLista)
+        {
+            LabID = labID;
+            LabNamn = labNamn;
+            Kurs = kurs;
+            BetygLista = betygLista;
+        }
+
+        public Laborationsuppgift(string labID, string labNamn, Kurs kurs)
+        {
+            LabID = labID;
+            LabNamn = labNamn;
+            Kurs = kurs;
+        }
+
     }
 }
