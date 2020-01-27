@@ -183,7 +183,11 @@ namespace SkolsystemLaboration2
             Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
             List<Laborationsuppgift> Laborationslista = new List<Laborationsuppgift>();
             //if not null?
-            Laborationslista = valdKurs.LaborationsuppgifterPåKurs;
+            if (valdKurs.LaborationsuppgifterPåKurs != null)
+            {
+                Laborationslista = valdKurs.LaborationsuppgifterPåKurs;
+            }
+            
             
             Laborationslista.Add(new Laborationsuppgift(LabIDTextbox.Text, LabNamnTextbox.Text, valdKurs));
 
@@ -199,6 +203,8 @@ namespace SkolsystemLaboration2
         {
             Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
             LabDataGrid.DataSource = valdKurs.LaborationsuppgifterPåKurs;
+            
+            
 
         }
 
@@ -275,9 +281,10 @@ namespace SkolsystemLaboration2
                 List<Lärare> valdKursLärareLista = valdKurs.LärarePåKurs;
 
                 LärareDataGrid.DataSource = valdKursLärareLista;
+                FyllLabDataGrid();
             }
 
-            FyllLabDataGrid();
+            
 
         }
 
