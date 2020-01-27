@@ -181,6 +181,16 @@ namespace SkolsystemLaboration2
         public void LäggTillLaborationsuppgift()
         {
             Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
+            List<Laborationsuppgift> Laborationslista = new List<Laborationsuppgift>();
+            //if not null?
+            Laborationslista = valdKurs.LaborationsuppgifterPåKurs;
+            
+            Laborationslista.Add(new Laborationsuppgift(LabIDTextbox.Text, LabNamnTextbox.Text, valdKurs));
+
+            valdKurs.LaborationsuppgifterPåKurs = Laborationslista;
+
+            LabDataGrid.DataSource = null;
+            LabDataGrid.DataSource = valdKurs.LaborationsuppgifterPåKurs;
             //
 
         }
@@ -303,12 +313,18 @@ namespace SkolsystemLaboration2
 
         private void LäggTillLabb_Click(object sender, EventArgs e)
         {
-
+            LäggTillLaborationsuppgift();
         }
 
         private void LabDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+        private void LabIDTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

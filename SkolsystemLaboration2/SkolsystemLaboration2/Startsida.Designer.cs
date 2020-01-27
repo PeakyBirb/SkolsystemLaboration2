@@ -49,9 +49,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.LabIDTextbox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.StudentListBox = new System.Windows.Forms.ListBox();
             this.LäggTillLabb = new System.Windows.Forms.Button();
+            this.LabNamnTextbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LärareDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LabDataGrid)).BeginInit();
@@ -242,6 +242,7 @@
             this.LabIDTextbox.Name = "LabIDTextbox";
             this.LabIDTextbox.Size = new System.Drawing.Size(83, 20);
             this.LabIDTextbox.TabIndex = 23;
+            this.LabIDTextbox.TextChanged += new System.EventHandler(this.LabIDTextbox_TextChanged);
             // 
             // label8
             // 
@@ -252,13 +253,6 @@
             this.label8.Size = new System.Drawing.Size(115, 16);
             this.label8.TabIndex = 24;
             this.label8.Text = "Laborationsnamn:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(198, 381);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(151, 20);
-            this.textBox1.TabIndex = 25;
             // 
             // StudentListBox
             // 
@@ -278,14 +272,21 @@
             this.LäggTillLabb.UseVisualStyleBackColor = true;
             this.LäggTillLabb.Click += new System.EventHandler(this.LäggTillLabb_Click);
             // 
+            // LabNamnTextbox
+            // 
+            this.LabNamnTextbox.Location = new System.Drawing.Point(217, 381);
+            this.LabNamnTextbox.Name = "LabNamnTextbox";
+            this.LabNamnTextbox.Size = new System.Drawing.Size(132, 20);
+            this.LabNamnTextbox.TabIndex = 28;
+            // 
             // Startsida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1087, 639);
+            this.Controls.Add(this.LabNamnTextbox);
             this.Controls.Add(this.LäggTillLabb);
             this.Controls.Add(this.StudentListBox);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.LabIDTextbox);
             this.Controls.Add(this.label7);
@@ -341,9 +342,9 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox LabIDTextbox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ListBox StudentListBox;
         private System.Windows.Forms.Button LäggTillLabb;
+        private System.Windows.Forms.TextBox LabNamnTextbox;
     }
 }
 
