@@ -330,15 +330,34 @@ namespace SkolsystemLaboration2
 
             Betyg betyg = new Betyg(valdKurs, valdLab, valdStudent, nyttBetyg);
 
-            valdKurs.BetygLista.Add(betyg);
-            valdStudent.BetygLista.Add(betyg);
-            valdLab.BetygLista.Add(betyg);
+            //valdKurs.BetygLista.Add(betyg);
+            //valdStudent.BetygLista.Add(betyg);
+            //valdLab.BetygLista.Add(betyg);
 
+            valdKurs.BetygLista = UppdateraBetygLista(valdKurs.BetygLista, betyg);
+            valdStudent.BetygLista = UppdateraBetygLista(valdKurs.BetygLista, betyg);
+            valdLab.BetygLista = UppdateraBetygLista(valdKurs.BetygLista, betyg);
             //
             //
 
         }
 
+        public List<Betyg> UppdateraBetygLista(List<Betyg> gammalBetygLista, Betyg nyttBetyg)
+        {
+            List<Betyg> nyBetygLista = new List<Betyg>();
+            if (gammalBetygLista != null)
+            {
+                nyBetygLista = gammalBetygLista;
+                nyBetygLista.Add(nyttBetyg);
+                return nyBetygLista;
+            }
+            else
+            {
+                nyBetygLista.Add(nyttBetyg);
+                return nyBetygLista;
+            }
+
+        }
 
         private void Startsida_Load(object sender, EventArgs e)
         {
