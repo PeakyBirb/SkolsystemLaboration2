@@ -109,10 +109,19 @@ namespace SkolsystemLaboration2
 
         public void FyllStudentListBox()
         {
+            Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
             Laborationsuppgift valdLaboration = (Laborationsuppgift)LaborationComboBox.SelectedItem;
+            List<Student> studenterPåKurs = new List<Student>();
             
             //studenter från en viss labb
-            //foreach(var student in valdLaboration.)
+            foreach(var student in valdKurs.StudenterPåKurs)
+            {
+                studenterPåKurs.Add(student);
+            }
+
+            StudentListBox.DataSource = null;
+            StudentListBox.DataSource = studenterPåKurs;
+
 
 
         }
