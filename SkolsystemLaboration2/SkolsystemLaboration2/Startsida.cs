@@ -83,6 +83,29 @@ namespace SkolsystemLaboration2
 
         }
 
+        public void FyllLaborationComboBox()
+        {
+
+
+
+
+            //Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
+            //List<Student> valdKursStudentLista = new List<Student>();
+
+            //foreach (var item in Kurser)
+            //{
+            //    foreach (var item2 in item.StudenterPåKurs)
+            //    {
+            //        valdKursStudentLista.Add(item2);
+            //    }
+            //}
+
+
+            LaborationComboBox.DataSource = null;
+            LaborationComboBox.ValueMember = "LabID";
+            LaborationComboBox.DisplayMember = "LabNamn";
+        }
+
         public void UppdateraKurser()
         {
             KursListBox.DataSource = null;
@@ -333,5 +356,9 @@ namespace SkolsystemLaboration2
 
         }
 
+        private void LaborationComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -53,6 +53,8 @@
             this.LäggTillLabb = new System.Windows.Forms.Button();
             this.LabNamnTextbox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.LaborationComboBox = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LärareDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LabDataGrid)).BeginInit();
@@ -165,7 +167,7 @@
             // BetygDataGrid
             // 
             this.BetygDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BetygDataGrid.Location = new System.Drawing.Point(748, 376);
+            this.BetygDataGrid.Location = new System.Drawing.Point(802, 376);
             this.BetygDataGrid.Name = "BetygDataGrid";
             this.BetygDataGrid.Size = new System.Drawing.Size(248, 251);
             this.BetygDataGrid.TabIndex = 14;
@@ -174,7 +176,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(745, 315);
+            this.label6.Location = new System.Drawing.Point(799, 315);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 16);
             this.label6.TabIndex = 15;
@@ -258,9 +260,9 @@
             // StudentListBox
             // 
             this.StudentListBox.FormattingEnabled = true;
-            this.StudentListBox.Location = new System.Drawing.Point(525, 381);
+            this.StudentListBox.Location = new System.Drawing.Point(584, 454);
             this.StudentListBox.Name = "StudentListBox";
-            this.StudentListBox.Size = new System.Drawing.Size(187, 238);
+            this.StudentListBox.Size = new System.Drawing.Size(187, 173);
             this.StudentListBox.TabIndex = 26;
             // 
             // LäggTillLabb
@@ -284,17 +286,38 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(522, 315);
+            this.label9.Location = new System.Drawing.Point(581, 417);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 16);
+            this.label9.Size = new System.Drawing.Size(65, 16);
             this.label9.TabIndex = 29;
-            this.label9.Text = "Studenten";
+            this.label9.Text = "Studenter";
+            // 
+            // LaborationComboBox
+            // 
+            this.LaborationComboBox.FormattingEnabled = true;
+            this.LaborationComboBox.Location = new System.Drawing.Point(584, 367);
+            this.LaborationComboBox.Name = "LaborationComboBox";
+            this.LaborationComboBox.Size = new System.Drawing.Size(121, 21);
+            this.LaborationComboBox.TabIndex = 30;
+            this.LaborationComboBox.SelectedIndexChanged += new System.EventHandler(this.LaborationComboBox_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(581, 315);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(144, 16);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Välj laborationsuppgift:";
             // 
             // Startsida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1087, 639);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.LaborationComboBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.LabNamnTextbox);
             this.Controls.Add(this.LäggTillLabb);
@@ -358,6 +381,8 @@
         private System.Windows.Forms.Button LäggTillLabb;
         private System.Windows.Forms.TextBox LabNamnTextbox;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox LaborationComboBox;
+        private System.Windows.Forms.Label label10;
     }
 }
 
