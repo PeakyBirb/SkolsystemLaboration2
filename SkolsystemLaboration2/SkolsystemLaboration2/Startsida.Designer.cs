@@ -55,6 +55,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.NyttBetygTextBox = new System.Windows.Forms.TextBox();
+            this.OkBetygButton = new System.Windows.Forms.Button();
+            this.betygLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LärareDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LabDataGrid)).BeginInit();
@@ -245,6 +248,7 @@
             this.StudentListBox.Name = "StudentListBox";
             this.StudentListBox.Size = new System.Drawing.Size(187, 173);
             this.StudentListBox.TabIndex = 26;
+            this.StudentListBox.SelectedIndexChanged += new System.EventHandler(this.StudentListBox_SelectedIndexChanged);
             // 
             // LäggTillLabb
             // 
@@ -306,17 +310,47 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(873, 469);
+            this.label11.Location = new System.Drawing.Point(871, 493);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(94, 16);
             this.label11.TabIndex = 32;
             this.label11.Text = "Välj nytt betyg:";
+            // 
+            // NyttBetygTextBox
+            // 
+            this.NyttBetygTextBox.Location = new System.Drawing.Point(971, 492);
+            this.NyttBetygTextBox.Name = "NyttBetygTextBox";
+            this.NyttBetygTextBox.Size = new System.Drawing.Size(82, 20);
+            this.NyttBetygTextBox.TabIndex = 34;
+            // 
+            // OkBetygButton
+            // 
+            this.OkBetygButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.OkBetygButton.Location = new System.Drawing.Point(997, 532);
+            this.OkBetygButton.Name = "OkBetygButton";
+            this.OkBetygButton.Size = new System.Drawing.Size(56, 23);
+            this.OkBetygButton.TabIndex = 35;
+            this.OkBetygButton.Text = "Ok";
+            this.OkBetygButton.UseVisualStyleBackColor = true;
+            this.OkBetygButton.Click += new System.EventHandler(this.OkBetygButton_Click);
+            // 
+            // betygLabel
+            // 
+            this.betygLabel.AutoSize = true;
+            this.betygLabel.Location = new System.Drawing.Point(991, 388);
+            this.betygLabel.Name = "betygLabel";
+            this.betygLabel.Size = new System.Drawing.Size(59, 13);
+            this.betygLabel.TabIndex = 33;
+            this.betygLabel.Text = "betygLabel";
             // 
             // Startsida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1152, 639);
+            this.Controls.Add(this.OkBetygButton);
+            this.Controls.Add(this.NyttBetygTextBox);
+            this.Controls.Add(this.betygLabel);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.LaborationComboBox);
@@ -383,6 +417,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox NyttBetygTextBox;
+        private System.Windows.Forms.Button OkBetygButton;
+        private System.Windows.Forms.Label betygLabel;
     }
 }
 

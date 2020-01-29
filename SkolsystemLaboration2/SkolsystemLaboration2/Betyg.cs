@@ -22,11 +22,12 @@ namespace SkolsystemLaboration2
         }
 
 
-        public Betyg(Kurs kurs, Laborationsuppgift laborationsuppgift, Student student)
+        public Betyg(Kurs kurs, Laborationsuppgift laborationsuppgift, Student student, string tilldelatBetyg)
         {
             Kurs = kurs;
             Laborationsuppgift = laborationsuppgift;
             Student = student;
+            TilldelatBetyg = tilldelatBetyg;
         }
     }
 }

@@ -126,8 +126,6 @@ namespace SkolsystemLaboration2
             StudentListBox.ValueMember = "Id";
             StudentListBox.DisplayMember = "Förnamn";
 
-            //
-
 
         }
 
@@ -230,7 +228,7 @@ namespace SkolsystemLaboration2
         {
             Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
             List<Laborationsuppgift> Laborationslista = new List<Laborationsuppgift>();
-            //if not null?
+
             if (valdKurs.LaborationsuppgifterPåKurs != null)
             {
                 Laborationslista = valdKurs.LaborationsuppgifterPåKurs;
@@ -243,7 +241,7 @@ namespace SkolsystemLaboration2
 
             LabDataGrid.DataSource = null;
             LabDataGrid.DataSource = valdKurs.LaborationsuppgifterPåKurs;
-            //
+            
 
         }
 
@@ -256,7 +254,34 @@ namespace SkolsystemLaboration2
 
         }
 
+        public void VisaBetyg()
+        {
+            Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
+            Student valdStudent = (Student)StudentListBox.SelectedItem;
+            Laborationsuppgift valdLab = (Laborationsuppgift)LaborationComboBox.SelectedItem;
 
+
+            //if (valdKurs.StudenterPåKurs == valdStudent && )
+            //{
+
+            //}
+
+            betygLabel.Text = "";
+        }
+
+        public void SättBetyg()
+        {
+            
+            Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
+            Student valdStudent = (Student)StudentListBox.SelectedItem;
+            Laborationsuppgift valdLab = (Laborationsuppgift)LaborationComboBox.SelectedItem;
+            string nyttBetyg = NyttBetygTextBox.Text;
+
+            Betyg betyg = new Betyg(valdKurs, valdLab, valdStudent, nyttBetyg);
+            //
+            //
+
+        }
 
 
         private void Startsida_Load(object sender, EventArgs e)
@@ -388,6 +413,17 @@ namespace SkolsystemLaboration2
         private void LaborationComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             FyllStudentListBox();
+        }
+
+        private void StudentListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            VisaBetyg();
+        }
+
+        private void OkBetygButton_Click(object sender, EventArgs e)
+        {
+            SättBetyg();
+            VisaBetyg();
         }
     }
 }
