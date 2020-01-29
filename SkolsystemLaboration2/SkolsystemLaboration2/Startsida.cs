@@ -90,22 +90,31 @@ namespace SkolsystemLaboration2
             List<Laborationsuppgift> laborationsuppgifterPåKurs = new List<Laborationsuppgift>();
 
 
-            foreach (var kurs in Kurser)
-            {
-                if (kurs.LaborationsuppgifterPåKurs != null)
+            
+                if (valdKurs.LaborationsuppgifterPåKurs != null)
                 {
 
-                foreach (var lab in kurs.LaborationsuppgifterPåKurs)
+                foreach (var lab in valdKurs.LaborationsuppgifterPåKurs)
                 {
                     laborationsuppgifterPåKurs.Add(lab);
                 }
                 }
-            }
+            
 
             LaborationComboBox.DataSource = null;
             LaborationComboBox.DataSource = laborationsuppgifterPåKurs;
             LaborationComboBox.ValueMember = "LabID";
             LaborationComboBox.DisplayMember = "LabNamn";
+        }
+
+        public void FyllStudentListBox()
+        {
+            Laborationsuppgift valdLaboration = (Laborationsuppgift)LaborationComboBox.SelectedItem;
+            
+            //studenter från en viss labb
+            //foreach(var student in valdLaboration.)
+
+
         }
 
         public void UppdateraKurser()

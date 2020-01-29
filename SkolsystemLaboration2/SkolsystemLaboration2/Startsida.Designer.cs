@@ -39,8 +39,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.LabDataGrid = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.BetygDataGrid = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
             this.StudentComboBox = new System.Windows.Forms.ComboBox();
             this.KursListBox = new System.Windows.Forms.ListBox();
             this.LärareComboBox = new System.Windows.Forms.ComboBox();
@@ -55,10 +53,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.LaborationComboBox = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LärareDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LabDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BetygDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // LäggTillKurs
@@ -164,24 +163,6 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Skapa laborationsuppgift till vald kurs ovan";
             // 
-            // BetygDataGrid
-            // 
-            this.BetygDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BetygDataGrid.Location = new System.Drawing.Point(856, 376);
-            this.BetygDataGrid.Name = "BetygDataGrid";
-            this.BetygDataGrid.Size = new System.Drawing.Size(248, 251);
-            this.BetygDataGrid.TabIndex = 14;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(853, 331);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(149, 16);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Alla betyg för Studenten";
-            // 
             // StudentComboBox
             // 
             this.StudentComboBox.FormattingEnabled = true;
@@ -260,7 +241,7 @@
             // StudentListBox
             // 
             this.StudentListBox.FormattingEnabled = true;
-            this.StudentListBox.Location = new System.Drawing.Point(584, 454);
+            this.StudentListBox.Location = new System.Drawing.Point(584, 452);
             this.StudentListBox.Name = "StudentListBox";
             this.StudentListBox.Size = new System.Drawing.Size(187, 173);
             this.StudentListBox.TabIndex = 26;
@@ -311,11 +292,32 @@
             this.label10.TabIndex = 31;
             this.label10.Text = "Välj laborationsuppgift";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(873, 385);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(115, 16);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Nuvarande betyg:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(873, 469);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(94, 16);
+            this.label11.TabIndex = 32;
+            this.label11.Text = "Välj nytt betyg:";
+            // 
             // Startsida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1152, 639);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.LaborationComboBox);
             this.Controls.Add(this.label9);
@@ -331,7 +333,6 @@
             this.Controls.Add(this.KursListBox);
             this.Controls.Add(this.StudentComboBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.BetygDataGrid);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.LabDataGrid);
             this.Controls.Add(this.label4);
@@ -349,7 +350,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LärareDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LabDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BetygDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,8 +367,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView LabDataGrid;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView BetygDataGrid;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox StudentComboBox;
         private System.Windows.Forms.ListBox KursListBox;
         private System.Windows.Forms.ComboBox LärareComboBox;
@@ -383,6 +381,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox LaborationComboBox;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label11;
     }
 }
 
