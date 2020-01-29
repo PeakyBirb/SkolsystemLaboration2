@@ -67,7 +67,7 @@ namespace SkolsystemLaboration2
             Kurser.Add(kurs2);
 
             List<Laborationsuppgift> Laborationslista = new List<Laborationsuppgift>();
-            Laborationslista.Add(new Laborationsuppgift("l1","Programmeringens mystiska vidunder", kurs));
+            Laborationslista.Add(new Laborationsuppgift("l1", "Programmeringens mystiska vidunder", kurs));
 
             kurs.LaborationsuppgifterPåKurs = Laborationslista;
 
@@ -90,16 +90,16 @@ namespace SkolsystemLaboration2
             List<Laborationsuppgift> laborationsuppgifterPåKurs = new List<Laborationsuppgift>();
 
 
-            
-                if (valdKurs.LaborationsuppgifterPåKurs != null)
-                {
+
+            if (valdKurs.LaborationsuppgifterPåKurs != null)
+            {
 
                 foreach (var lab in valdKurs.LaborationsuppgifterPåKurs)
                 {
                     laborationsuppgifterPåKurs.Add(lab);
                 }
-                }
-            
+            }
+
 
             LaborationComboBox.DataSource = null;
             LaborationComboBox.DataSource = laborationsuppgifterPåKurs;
@@ -115,10 +115,10 @@ namespace SkolsystemLaboration2
 
             if (valdKurs.StudenterPåKurs != null)
             {
-            foreach(var student in valdKurs.StudenterPåKurs)
-            {
-                studenterPåKurs.Add(student);
-            }
+                foreach (var student in valdKurs.StudenterPåKurs)
+                {
+                    studenterPåKurs.Add(student);
+                }
             }
 
             StudentListBox.DataSource = null;
@@ -233,15 +233,15 @@ namespace SkolsystemLaboration2
             {
                 Laborationslista = valdKurs.LaborationsuppgifterPåKurs;
             }
-            
-            
+
+
             Laborationslista.Add(new Laborationsuppgift(LabIDTextbox.Text, LabNamnTextbox.Text, valdKurs));
 
             valdKurs.LaborationsuppgifterPåKurs = Laborationslista;
 
             LabDataGrid.DataSource = null;
             LabDataGrid.DataSource = valdKurs.LaborationsuppgifterPåKurs;
-            
+
 
         }
 
@@ -249,8 +249,8 @@ namespace SkolsystemLaboration2
         {
             Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
             LabDataGrid.DataSource = valdKurs.LaborationsuppgifterPåKurs;
-            
-            
+
+
 
         }
 
@@ -266,12 +266,31 @@ namespace SkolsystemLaboration2
 
             //}
 
+            //foreach (var student in valdKurs.LaborationsuppgifterPåKurs)
+            //{
+            //    foreach (var student2 in valdKurs.StudenterPåKurs)
+            //    {
+            //        if (student2 == student)
+            //        {
+
+            //        }
+
+            //    }
+            //    foreach (var laboration in valdKurs.LaborationsuppgifterPåKurs)
+            //    {
+            //        if (valdStudent.)
+            //        {
+
+            //        }
+            //    }
+            //}
+
             betygLabel.Text = "";
         }
 
         public void SättBetyg()
         {
-            
+
             Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
             Student valdStudent = (Student)StudentListBox.SelectedItem;
             Laborationsuppgift valdLab = (Laborationsuppgift)LaborationComboBox.SelectedItem;
@@ -339,7 +358,7 @@ namespace SkolsystemLaboration2
 
         private void StudentComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void KursListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -359,7 +378,7 @@ namespace SkolsystemLaboration2
                 FyllLaborationComboBox();
             }
 
-            
+
 
         }
 
@@ -380,7 +399,7 @@ namespace SkolsystemLaboration2
 
         private void LärareComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void LäggTillStudent_Click(object sender, EventArgs e)
@@ -424,6 +443,11 @@ namespace SkolsystemLaboration2
         {
             SättBetyg();
             VisaBetyg();
+        }
+
+        private void betygLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

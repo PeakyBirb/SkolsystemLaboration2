@@ -342,6 +342,7 @@
             this.betygLabel.Size = new System.Drawing.Size(59, 13);
             this.betygLabel.TabIndex = 33;
             this.betygLabel.Text = "betygLabel";
+            this.betygLabel.Click += new System.EventHandler(this.betygLabel_Click);
             // 
             // Startsida
             // 
