@@ -319,7 +319,7 @@
             // OkBetygButton
             // 
             this.OkBetygButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.OkBetygButton.Location = new System.Drawing.Point(997, 532);
+            this.OkBetygButton.Location = new System.Drawing.Point(975, 531);
             this.OkBetygButton.Name = "OkBetygButton";
             this.OkBetygButton.Size = new System.Drawing.Size(56, 23);
             this.OkBetygButton.TabIndex = 35;
@@ -330,6 +330,7 @@
             // betygLabel
             // 
             this.betygLabel.AutoSize = true;
+            this.betygLabel.ForeColor = System.Drawing.Color.Crimson;
             this.betygLabel.Location = new System.Drawing.Point(991, 388);
             this.betygLabel.Name = "betygLabel";
             this.betygLabel.Size = new System.Drawing.Size(59, 13);
@@ -344,7 +345,7 @@
             "U",
             "G",
             "VG"});
-            this.NyttBetygComboBox.Location = new System.Drawing.Point(971, 452);
+            this.NyttBetygComboBox.Location = new System.Drawing.Point(971, 492);
             this.NyttBetygComboBox.Name = "NyttBetygComboBox";
             this.NyttBetygComboBox.Size = new System.Drawing.Size(60, 21);
             this.NyttBetygComboBox.TabIndex = 36;

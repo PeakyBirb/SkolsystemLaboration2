@@ -60,7 +60,7 @@ namespace SkolsystemLaboration2
 
             Kurs kurs = new Kurs("01", "Systemutveckling 1", StudentLista, LärareLista);
             Kurs kurs2 = new Kurs("02", "Systemutveckling 2", StudentLista2, LärareLista2);
-            
+
 
             Kurser = new List<Kurs>();
             Kurser.Add(kurs);
@@ -277,36 +277,39 @@ namespace SkolsystemLaboration2
             Laborationsuppgift valdLab = (Laborationsuppgift)LaborationComboBox.SelectedItem;
 
 
-            //if (valdKurs.StudenterPåKurs == valdStudent && )
-            //{
 
-            //}
+            if (valdKurs.BetygLista != null)
+            {
+                foreach (var betyg in valdKurs.BetygLista)
+                {
+                    foreach (var student in valdKurs.StudenterPåKurs)
+                    {
+                        if (student == betyg.Student)
+                        {
+                            if (betyg.TilldelatBetyg != null)
+                            {
+                                betygLabel.Text = betyg.TilldelatBetyg;
+                            }
+                            else
+                            {
+                                betygLabel.Text = "Inget betyg";
+                            }
 
-            //foreach (var student in valdKurs.LaborationsuppgifterPåKurs)
-            //{
-            //    foreach (var student2 in valdKurs.StudenterPåKurs)
-            //    {
-            //        if (student2 == student)
-            //        {
+                        }
 
-            //        }
+                    }
+                }
 
-            //    }
-            //    foreach (var laboration in valdKurs.LaborationsuppgifterPåKurs)
-            //    {
-            //        if (valdStudent.)
-            //        {
+            }
+            else
+            {
+                betygLabel.Text = "Inget betyg";
+            }
 
-            //        }
-            //    }
-            //}
-
-            betygLabel.Text = "";
         }
 
         public void SättBetyg()
         {
-
             Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
             Student valdStudent = (Student)StudentListBox.SelectedItem;
             Laborationsuppgift valdLab = (Laborationsuppgift)LaborationComboBox.SelectedItem;
@@ -314,8 +317,9 @@ namespace SkolsystemLaboration2
 
             Betyg betyg = new Betyg(valdKurs, valdLab, valdStudent, nyttBetyg);
 
-
-
+            valdKurs.BetygLista.Add(betyg);
+            valdStudent.BetygLista.Add(betyg);
+            valdLab.BetygLista.Add(betyg);
 
             //
             //
@@ -359,7 +363,7 @@ namespace SkolsystemLaboration2
         }
 
 
-        
+
 
         private void LäggTillKurs_Click(object sender, EventArgs e)
         {
