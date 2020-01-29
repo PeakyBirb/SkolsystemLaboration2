@@ -86,22 +86,24 @@ namespace SkolsystemLaboration2
         public void FyllLaborationComboBox()
         {
 
+            Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
+            List<Laborationsuppgift> laborationsuppgifterPåKurs = new List<Laborationsuppgift>();
 
 
+            foreach (var kurs in Kurser)
+            {
+                if (kurs.LaborationsuppgifterPåKurs != null)
+                {
 
-            //Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
-            //List<Student> valdKursStudentLista = new List<Student>();
-
-            //foreach (var item in Kurser)
-            //{
-            //    foreach (var item2 in item.StudenterPåKurs)
-            //    {
-            //        valdKursStudentLista.Add(item2);
-            //    }
-            //}
-
+                foreach (var lab in kurs.LaborationsuppgifterPåKurs)
+                {
+                    laborationsuppgifterPåKurs.Add(lab);
+                }
+                }
+            }
 
             LaborationComboBox.DataSource = null;
+            LaborationComboBox.DataSource = laborationsuppgifterPåKurs;
             LaborationComboBox.ValueMember = "LabID";
             LaborationComboBox.DisplayMember = "LabNamn";
         }
@@ -239,6 +241,7 @@ namespace SkolsystemLaboration2
             FyllStudentComboBox();
             FyllLärareComboBox();
             FyllLabDataGrid();
+            FyllLaborationComboBox();
         }
 
         private void KursDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -344,6 +347,7 @@ namespace SkolsystemLaboration2
         private void LäggTillLabb_Click(object sender, EventArgs e)
         {
             LäggTillLaborationsuppgift();
+            FyllLaborationComboBox();
         }
 
         private void LabDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)

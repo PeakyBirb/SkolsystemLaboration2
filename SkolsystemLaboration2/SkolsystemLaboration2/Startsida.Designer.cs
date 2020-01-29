@@ -167,7 +167,7 @@
             // BetygDataGrid
             // 
             this.BetygDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.BetygDataGrid.Location = new System.Drawing.Point(802, 376);
+            this.BetygDataGrid.Location = new System.Drawing.Point(856, 376);
             this.BetygDataGrid.Name = "BetygDataGrid";
             this.BetygDataGrid.Size = new System.Drawing.Size(248, 251);
             this.BetygDataGrid.TabIndex = 14;
@@ -176,7 +176,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(799, 315);
+            this.label6.Location = new System.Drawing.Point(853, 331);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 16);
             this.label6.TabIndex = 15;
@@ -297,7 +297,7 @@
             this.LaborationComboBox.FormattingEnabled = true;
             this.LaborationComboBox.Location = new System.Drawing.Point(584, 367);
             this.LaborationComboBox.Name = "LaborationComboBox";
-            this.LaborationComboBox.Size = new System.Drawing.Size(121, 21);
+            this.LaborationComboBox.Size = new System.Drawing.Size(187, 21);
             this.LaborationComboBox.TabIndex = 30;
             this.LaborationComboBox.SelectedIndexChanged += new System.EventHandler(this.LaborationComboBox_SelectedIndexChanged);
             // 
@@ -305,17 +305,17 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(581, 315);
+            this.label10.Location = new System.Drawing.Point(581, 331);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(144, 16);
+            this.label10.Size = new System.Drawing.Size(141, 16);
             this.label10.TabIndex = 31;
-            this.label10.Text = "Välj laborationsuppgift:";
+            this.label10.Text = "Välj laborationsuppgift";
             // 
             // Startsida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 639);
+            this.ClientSize = new System.Drawing.Size(1152, 639);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.LaborationComboBox);
             this.Controls.Add(this.label9);
