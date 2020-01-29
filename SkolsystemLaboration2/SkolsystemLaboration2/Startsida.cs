@@ -60,11 +60,20 @@ namespace SkolsystemLaboration2
 
             Kurs kurs = new Kurs("01", "Systemutveckling 1", StudentLista, LärareLista);
             Kurs kurs2 = new Kurs("02", "Systemutveckling 2", StudentLista2, LärareLista2);
-
+            
 
             Kurser = new List<Kurs>();
             Kurser.Add(kurs);
             Kurser.Add(kurs2);
+
+            foreach (var Kurs in Kurser)
+            {
+                foreach (var student in Kurs.StudenterPåKurs)
+                {
+                    student.studentensKursLista.Add(Kurs);
+                }
+            }
+
 
             List<Laborationsuppgift> Laborationslista = new List<Laborationsuppgift>();
             Laborationslista.Add(new Laborationsuppgift("l1", "Programmeringens mystiska vidunder", kurs));
@@ -297,6 +306,10 @@ namespace SkolsystemLaboration2
             string nyttBetyg = NyttBetygTextBox.Text;
 
             Betyg betyg = new Betyg(valdKurs, valdLab, valdStudent, nyttBetyg);
+
+
+
+
             //
             //
 
