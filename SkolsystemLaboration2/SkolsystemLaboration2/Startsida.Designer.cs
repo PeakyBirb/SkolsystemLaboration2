@@ -55,9 +55,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.NyttBetygTextBox = new System.Windows.Forms.TextBox();
             this.OkBetygButton = new System.Windows.Forms.Button();
             this.betygLabel = new System.Windows.Forms.Label();
+            this.NyttBetygComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LärareDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LabDataGrid)).BeginInit();
@@ -316,13 +316,6 @@
             this.label11.TabIndex = 32;
             this.label11.Text = "Välj nytt betyg:";
             // 
-            // NyttBetygTextBox
-            // 
-            this.NyttBetygTextBox.Location = new System.Drawing.Point(971, 492);
-            this.NyttBetygTextBox.Name = "NyttBetygTextBox";
-            this.NyttBetygTextBox.Size = new System.Drawing.Size(82, 20);
-            this.NyttBetygTextBox.TabIndex = 34;
-            // 
             // OkBetygButton
             // 
             this.OkBetygButton.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -344,13 +337,25 @@
             this.betygLabel.Text = "betygLabel";
             this.betygLabel.Click += new System.EventHandler(this.betygLabel_Click);
             // 
+            // NyttBetygComboBox
+            // 
+            this.NyttBetygComboBox.FormattingEnabled = true;
+            this.NyttBetygComboBox.Items.AddRange(new object[] {
+            "U",
+            "G",
+            "VG"});
+            this.NyttBetygComboBox.Location = new System.Drawing.Point(971, 452);
+            this.NyttBetygComboBox.Name = "NyttBetygComboBox";
+            this.NyttBetygComboBox.Size = new System.Drawing.Size(60, 21);
+            this.NyttBetygComboBox.TabIndex = 36;
+            // 
             // Startsida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1152, 639);
+            this.Controls.Add(this.NyttBetygComboBox);
             this.Controls.Add(this.OkBetygButton);
-            this.Controls.Add(this.NyttBetygTextBox);
             this.Controls.Add(this.betygLabel);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -418,9 +423,9 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox NyttBetygTextBox;
         private System.Windows.Forms.Button OkBetygButton;
         private System.Windows.Forms.Label betygLabel;
+        private System.Windows.Forms.ComboBox NyttBetygComboBox;
     }
 }
 

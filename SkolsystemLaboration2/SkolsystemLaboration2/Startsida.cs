@@ -92,6 +92,13 @@ namespace SkolsystemLaboration2
 
         }
 
+        public void LäggTillNyKurs(string kursID, string kursnamn, List<Student> studenterPåKurs, List<Lärare> lärarePåKurs)
+        {
+            Kurs kurs = new Kurs(kursID, kursnamn, studenterPåKurs, lärarePåKurs);
+
+            Kurser.Add(kurs);
+        }
+
         public void FyllLaborationComboBox()
         {
 
@@ -303,7 +310,7 @@ namespace SkolsystemLaboration2
             Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
             Student valdStudent = (Student)StudentListBox.SelectedItem;
             Laborationsuppgift valdLab = (Laborationsuppgift)LaborationComboBox.SelectedItem;
-            string nyttBetyg = NyttBetygTextBox.Text;
+            string nyttBetyg = NyttBetygComboBox.Text;
 
             Betyg betyg = new Betyg(valdKurs, valdLab, valdStudent, nyttBetyg);
 
@@ -351,22 +358,15 @@ namespace SkolsystemLaboration2
 
         }
 
+
+        
+
         private void LäggTillKurs_Click(object sender, EventArgs e)
         {
-            List<Student> StudentPåNyKurs = new List<Student>();
-            //StudentPåNyKurs.Add(new Student("skriv ID", "skriv förnamn", "skriv efternamn"));
 
-            List<Lärare> LärarePåNyKurs = new List<Lärare>();
-            //LärarePåNyKurs.Add(new Lärare("skriv ID", "skriv förnamn", "skriv efternamn"));
+            LäggTillNyKurs(KursIDTextbox.Text, KursnamnTextbox.Text, null, null);
 
-            Kurs kurs = new Kurs(KursIDTextbox.Text, KursnamnTextbox.Text, null, null);
-
-            Kurser.Add(kurs);
-
-            KursListBox.DataSource = null;
-            KursListBox.DataSource = Kurser;
-            KursListBox.DisplayMember = "KursNamn";
-            KursListBox.ValueMember = "KursID";
+            UppdateraKurser();
         }
 
         private void StudentComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -459,6 +459,11 @@ namespace SkolsystemLaboration2
         }
 
         private void betygLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NyttBetygTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
