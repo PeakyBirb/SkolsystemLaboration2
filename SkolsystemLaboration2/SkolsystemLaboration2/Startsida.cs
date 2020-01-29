@@ -317,6 +317,7 @@ namespace SkolsystemLaboration2
 
                 LärareDataGrid.DataSource = valdKursLärareLista;
                 FyllLabDataGrid();
+                FyllLaborationComboBox();
             }
 
             
