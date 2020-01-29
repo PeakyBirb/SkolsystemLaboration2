@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace SkolsystemLaboration2
 {
-    public class Student : Person
+    public class Student : Person, IStudent
     {
 
-        public List<Kurs> studentensKursLista = new List<Kurs>();
+        public List<Kurs> StudentensKursLista { get; set; }
         public Student(string id, string förnamn, string efternamn)
         {
             Id = id;
@@ -19,7 +19,7 @@ namespace SkolsystemLaboration2
         }
         public Student(Kurs nyKurs)
         {
-            studentensKursLista.Add(nyKurs);
+            StudentensKursLista.Add(nyKurs);
         }
 
         public List<Betyg> BetygLista { get; set; }

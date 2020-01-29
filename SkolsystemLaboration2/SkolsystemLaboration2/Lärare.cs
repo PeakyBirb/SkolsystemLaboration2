@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SkolsystemLaboration2
 {
-    public class Lärare : Person
+    public class Lärare : Person, ILärare
     {
         public Lärare(string id, string förnamn, string efternamn)
         {

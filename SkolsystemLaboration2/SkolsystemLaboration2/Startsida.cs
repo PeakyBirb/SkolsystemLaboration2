@@ -28,6 +28,7 @@ namespace SkolsystemLaboration2
         #region genereraobjekt
         public void GenereraObjekt()
         {
+            Betyg nullbetyg = new Betyg(null, null, null, null);
             List<Student> StudentLista = new List<Student>();
 
 
@@ -57,22 +58,27 @@ namespace SkolsystemLaboration2
             LärareLista2.Add(new Lärare("145", "Åkan", "Handersson"));
             LärareLista2.Add(new Lärare("156", "Sanders", "Fomk"));
 
+            List<Betyg> betyglista = new List<Betyg>();
+            betyglista.Add(nullbetyg);
 
             Kurs kurs = new Kurs("01", "Systemutveckling 1", StudentLista, LärareLista);
             Kurs kurs2 = new Kurs("02", "Systemutveckling 2", StudentLista2, LärareLista2);
 
+            kurs.BetygLista = betyglista;
+            kurs2.BetygLista = betyglista;
 
             Kurser = new List<Kurs>();
             Kurser.Add(kurs);
             Kurser.Add(kurs2);
 
-            foreach (var Kurs in Kurser)
-            {
-                foreach (var student in Kurs.StudenterPåKurs)
-                {
-                    student.studentensKursLista.Add(Kurs);
-                }
-            }
+            //foreach (var Kurs in Kurser)
+            //{
+            //    foreach (var student in Kurs.StudenterPåKurs)
+            //    {
+            //        student.StudentensKursLista.Add(Kurs);
+            //    }
+            //}
+            
 
 
             List<Laborationsuppgift> Laborationslista = new List<Laborationsuppgift>();
