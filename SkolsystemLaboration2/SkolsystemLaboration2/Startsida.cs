@@ -198,10 +198,13 @@ namespace SkolsystemLaboration2
             }
 
 
+        }
 
+        public void UppdateraStudentDataGrid()
+        {
+            Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
             StudentDataGrid.DataSource = null;
             StudentDataGrid.DataSource = valdKurs.StudenterPåKurs;
-
         }
 
         public void FyllLärareComboBox()
@@ -241,9 +244,13 @@ namespace SkolsystemLaboration2
                 valdKurs.LärarePåKurs = nyLärarLista;
             }
 
+        }
+
+        public void UppdateraLärareDataGrid()
+        {
+            Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
             LärareDataGrid.DataSource = null;
             LärareDataGrid.DataSource = valdKurs.LärarePåKurs;
-
         }
 
         public void LäggTillLaborationsuppgift()
@@ -429,11 +436,13 @@ namespace SkolsystemLaboration2
         {
             LäggTillStudentPåKursFrånComboBox();
             FyllLaborationComboBox();
+            UppdateraStudentDataGrid();
         }
 
         private void LäggTillLärare_Click(object sender, EventArgs e)
         {
             LäggTillLärarePåKursFrånComboBox();
+            UppdateraLärareDataGrid();
         }
 
         private void LäggTillLabb_Click(object sender, EventArgs e)
