@@ -85,10 +85,10 @@ namespace SkolsystemLaboration2
                 }
             }
 
-
+            List<Betyg> NullBetyg = new List<Betyg>();
 
             List<Laborationsuppgift> Laborationslista = new List<Laborationsuppgift>();
-            Laborationslista.Add(new Laborationsuppgift("l1", "Programmeringens mystiska vidunder", kurs));
+            Laborationslista.Add(new Laborationsuppgift("l1", "Programmeringens mystiska vidunder", kurs, NullBetyg));
 
             kurs.LaborationsuppgifterPåKurs = Laborationslista;
 
@@ -269,8 +269,9 @@ namespace SkolsystemLaboration2
                 Laborationslista = valdKurs.LaborationsuppgifterPåKurs;
             }
 
+            List<Betyg> NullBetyg = new List<Betyg>();
 
-            Laborationslista.Add(new Laborationsuppgift(LabIDTextbox.Text, LabNamnTextbox.Text, valdKurs));
+            Laborationslista.Add(new Laborationsuppgift(LabIDTextbox.Text, LabNamnTextbox.Text, valdKurs, NullBetyg));
 
             valdKurs.LaborationsuppgifterPåKurs = Laborationslista;
 
@@ -295,46 +296,39 @@ namespace SkolsystemLaboration2
             Student valdStudent = (Student)StudentListBox.SelectedItem;
             Laborationsuppgift valdLab = (Laborationsuppgift)LaborationComboBox.SelectedItem;
 
-
-
-            //Betyg valtBetyg = 
+            //leta i betygklass
             
 
-
-
-
-            //leta i betygklass
-
-
             //kolla samma index som StudentensKursLista som BetygLista
-            //if (valdKurs.BetygLista != null)
-            //{
-            //    foreach (var betyg in valdKurs.BetygLista)
-            //    {
-            //        foreach (var student in valdKurs.StudenterPåKurs)
-            //        {
-            //            if (valdStudent == betyg.Student)
-            //            {
-            //                if (betyg.TilldelatBetyg != null)
-            //                {
-            //                    betygLabel.Text = betyg.TilldelatBetyg;
-            //                }
-            //                else
-            //                {
-            //                    betygLabel.Text = "Inget betyg";
-            //                }
+            if (valdLab != null)
+            {
 
-            //            }
 
-            //        }
-            //    }
+                if (valdLab.BetygLista != null)
+                {
+                    foreach (Betyg betyg in valdLab.BetygLista)
+                    {
+                        if (betyg.Student == valdStudent)
+                        {
+                            if (betyg.TilldelatBetyg != null)
+                            {
+                                betygLabel.Text = betyg.TilldelatBetyg;
+                                break;
+                            }
+                                                            
+                        }
+                        else
+                        {
 
-            //}
-            //else
-            //{
-            //    betygLabel.Text = "Inget betyg";
-            //}
-
+                            continue;
+                        }
+                    }
+                }
+                else
+                {
+                    //betygLabel.Text = "Inget betyg";
+                }
+            }
         }
 
         public void SättBetyg()
@@ -351,12 +345,13 @@ namespace SkolsystemLaboration2
             //valdLab.BetygLista.Add(betyg);
 
             valdKurs.BetygLista = UppdateraBetygLista(valdKurs.BetygLista, betyg);
-            valdStudent.BetygLista = UppdateraBetygLista(valdKurs.BetygLista, betyg);
-            valdLab.BetygLista = UppdateraBetygLista(valdKurs.BetygLista, betyg);
+            valdStudent.BetygLista = UppdateraBetygLista(valdStudent.BetygLista, betyg);
+            valdLab.BetygLista = UppdateraBetygLista(valdLab.BetygLista, betyg);
             //
             //
-
         }
+
+
 
         public List<Betyg> UppdateraBetygLista(List<Betyg> gammalBetygLista, Betyg nyttBetyg)
         {
@@ -510,6 +505,13 @@ namespace SkolsystemLaboration2
         {
             SättBetyg();
             VisaBetyg();
+            UppdateraStudenterListBox();
+        }
+        public void UppdateraStudenterListBox()
+        {
+            StudentListBox.DataSource = null;
+            StudentListBox.DataSource = (((Kurs)KursListBox.SelectedItem).StudenterPåKurs);
+            StudentListBox.DisplayMember = "Förnamn";
         }
 
         private void betygLabel_Click(object sender, EventArgs e)
@@ -518,6 +520,11 @@ namespace SkolsystemLaboration2
         }
 
         private void NyttBetygTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void studentBetygDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

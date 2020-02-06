@@ -123,8 +123,8 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Kurs" />
-      <Property Name="Student" />
       <Property Name="Laborationsuppgift" />
+      <Property Name="Student" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>

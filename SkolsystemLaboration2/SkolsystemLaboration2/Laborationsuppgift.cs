@@ -35,12 +35,7 @@ namespace SkolsystemLaboration2
             BetygLista = betygLista;
         }
 
-        public Laborationsuppgift(string labID, string labNamn, Kurs kurs)
-        {
-            LabID = labID;
-            LabNamn = labNamn;
-            Kurs = kurs;
-        }
+        
 
     }
 }
