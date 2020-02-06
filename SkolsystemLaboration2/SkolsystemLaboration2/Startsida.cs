@@ -297,36 +297,49 @@ namespace SkolsystemLaboration2
             Laborationsuppgift valdLab = (Laborationsuppgift)LaborationComboBox.SelectedItem;
 
             //leta i betygklass
-            
+
 
             //kolla samma index som StudentensKursLista som BetygLista
             if (valdLab != null)
             {
 
-
                 if (valdLab.BetygLista != null)
                 {
-                    foreach (Betyg betyg in valdLab.BetygLista)
-                    {
-                        if (betyg.Student == valdStudent)
-                        {
-                            if (betyg.TilldelatBetyg != null)
-                            {
-                                betygLabel.Text = betyg.TilldelatBetyg;
-                                break;
-                            }
-                                                            
-                        }
-                        else
-                        {
 
-                            continue;
-                        }
+                    var result = (from b in valdLab.BetygLista
+                                  where valdStudent == b.Student
+                                  select b.TilldelatBetyg).SingleOrDefault();
+
+
+                    if (result != null)
+                    {
+
+                        betygLabel.Text = result.ToString();
                     }
+                    else
+                    {
+                        betygLabel.Text = "Inget betyg";
+                    }
+
+
+                    //foreach (Betyg betyg in valdLab.BetygLista)
+                    //{
+                    //    if (betyg.Student == valdStudent)
+                    //    {
+                    //        betygLabel.Text = betyg.TilldelatBetyg;
+                    //        break;
+                    //    }
+                    //    else
+                    //    {
+                    //        betygLabel.Text = "Inget betyg";
+                    //        break;
+
+                    //    }
+                    //}
                 }
                 else
                 {
-                    //betygLabel.Text = "Inget betyg";
+                    betygLabel.Text = "Inget betyg";
                 }
             }
         }
@@ -340,15 +353,11 @@ namespace SkolsystemLaboration2
 
             Betyg betyg = new Betyg(valdKurs, valdLab, valdStudent, nyttBetyg);
 
-            //valdKurs.BetygLista.Add(betyg);
-            //valdStudent.BetygLista.Add(betyg);
-            //valdLab.BetygLista.Add(betyg);
-
             valdKurs.BetygLista = UppdateraBetygLista(valdKurs.BetygLista, betyg);
             valdStudent.BetygLista = UppdateraBetygLista(valdStudent.BetygLista, betyg);
             valdLab.BetygLista = UppdateraBetygLista(valdLab.BetygLista, betyg);
-            //
-            //
+
+
         }
 
 
