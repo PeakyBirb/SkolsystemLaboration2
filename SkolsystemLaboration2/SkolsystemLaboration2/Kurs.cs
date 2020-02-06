@@ -52,13 +52,6 @@ namespace SkolsystemLaboration2
             BetygLista = betyglista;
         }
 
-        //public Kurs(string kursID, string kursNamn)
-        //{
-        //    KursID = kursID;
-        //    KursNamn = kursNamn;
-
-
-        //}
 
         public Kurs(List<Student> studenterPåKurs)
         {

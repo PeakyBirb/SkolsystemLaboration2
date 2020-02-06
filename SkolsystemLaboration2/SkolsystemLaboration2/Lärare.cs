@@ -8,14 +8,20 @@ namespace SkolsystemLaboration2
 {
     public class Lärare : Person, ILärare
     {
-        public Lärare(string id, string förnamn, string efternamn)
+        private int lön;
+        public int Lön
+        {
+            get { return lön; }
+            set { lön = value; }
+        }
+
+        public Lärare(string id, string förnamn, string efternamn, int lön)
         {
             Id = id;
             Förnamn = förnamn;
             Efternamn = efternamn;
-            
-
+            Lön = lön;
         }
-        //Gör lista med lärare
+        
     }
 }

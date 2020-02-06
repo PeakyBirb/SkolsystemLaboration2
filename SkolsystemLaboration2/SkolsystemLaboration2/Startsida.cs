@@ -46,17 +46,17 @@ namespace SkolsystemLaboration2
 
             List<Lärare> LärareLista = new List<Lärare>();
 
-            LärareLista.Add(new Lärare("101", "Alfons", "Svensson"));
-            LärareLista.Add(new Lärare("102", "Petter", "Sveni"));
-            LärareLista.Add(new Lärare("103", "Anna", "Lostuio"));
-            LärareLista.Add(new Lärare("104", "Christer", "Vol"));
-            LärareLista.Add(new Lärare("105", "Håkan", "Malmberg"));
-            LärareLista.Add(new Lärare("106", "Anders", "Komf"));
+            LärareLista.Add(new Lärare("101", "Alfons", "Svensson", 28000));
+            LärareLista.Add(new Lärare("102", "Petter", "Sveni", 30100));
+            LärareLista.Add(new Lärare("103", "Anna", "Lostuio", 25300));
+            LärareLista.Add(new Lärare("104", "Christer", "Vol", 32500));
+            LärareLista.Add(new Lärare("105", "Håkan", "Malmberg", 28555));
+            LärareLista.Add(new Lärare("106", "Anders", "Komf", 38200));
 
             List<Lärare> LärareLista2 = new List<Lärare>();
-            LärareLista2.Add(new Lärare("134", "Rister", "Lov"));
-            LärareLista2.Add(new Lärare("145", "Åkan", "Handersson"));
-            LärareLista2.Add(new Lärare("156", "Sanders", "Fomk"));
+            LärareLista2.Add(new Lärare("134", "Rister", "Lov", 26999));
+            LärareLista2.Add(new Lärare("145", "Åkan", "Handersson", 26800));
+            LärareLista2.Add(new Lärare("156", "Sanders", "Fomk", 30200));
 
             List<Betyg> betyglista = new List<Betyg>();
             betyglista.Add(nullbetyg);
@@ -79,7 +79,7 @@ namespace SkolsystemLaboration2
                     {
                         List<Kurs> tillfälligStudentKursLista = new List<Kurs>();
                         student.StudentensKursLista = tillfälligStudentKursLista;
-                        //lägg till tom lista
+                        
                     }
                     student.StudentensKursLista.Add(Kurs);
                 }
@@ -296,10 +296,6 @@ namespace SkolsystemLaboration2
             Student valdStudent = (Student)StudentListBox.SelectedItem;
             Laborationsuppgift valdLab = (Laborationsuppgift)LaborationComboBox.SelectedItem;
 
-            //leta i betygklass
-
-
-            //kolla samma index som StudentensKursLista som BetygLista
             if (valdLab != null)
             {
 
@@ -321,21 +317,6 @@ namespace SkolsystemLaboration2
                         betygLabel.Text = "Inget betyg";
                     }
 
-
-                    //foreach (Betyg betyg in valdLab.BetygLista)
-                    //{
-                    //    if (betyg.Student == valdStudent)
-                    //    {
-                    //        betygLabel.Text = betyg.TilldelatBetyg;
-                    //        break;
-                    //    }
-                    //    else
-                    //    {
-                    //        betygLabel.Text = "Inget betyg";
-                    //        break;
-
-                    //    }
-                    //}
                 }
                 else
                 {

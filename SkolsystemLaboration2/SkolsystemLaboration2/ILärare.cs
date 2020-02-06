@@ -8,5 +8,6 @@ namespace SkolsystemLaboration2
 {
     interface ILärare
     {
+        int Lön { get; set; }
     }
 }

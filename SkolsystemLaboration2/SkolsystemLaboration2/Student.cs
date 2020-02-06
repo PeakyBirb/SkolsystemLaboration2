@@ -29,6 +29,6 @@ namespace SkolsystemLaboration2
             return Förnamn + " " + Efternamn;
         }
 
-       //Gör lista med studenter(?)
+       
     }
 }
