@@ -9,7 +9,11 @@ namespace SkolsystemLaboration2
     public class Betyg : IBetyg
     {
         private string tilldelatBetyg;
-        public string TilldelatBetyg { get; set; }
+        public string TilldelatBetyg
+        {
+            get { return tilldelatBetyg; }
+            set { tilldelatBetyg = value; }
+        }
 
         public Kurs Kurs { get; set; } 
         public Laborationsuppgift Laborationsuppgift { get; set; }

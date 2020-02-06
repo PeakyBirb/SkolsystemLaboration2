@@ -71,14 +71,20 @@ namespace SkolsystemLaboration2
             Kurser.Add(kurs);
             Kurser.Add(kurs2);
 
-            //foreach (var Kurs in Kurser)
-            //{
-            //    foreach (var student in Kurs.StudenterPåKurs)
-            //    {
-            //        student.StudentensKursLista.Add(Kurs);
-            //    }
-            //}
-            
+            foreach (var Kurs in Kurser)
+            {
+                foreach (var student in Kurs.StudenterPåKurs)
+                {
+                    if (student.StudentensKursLista == null)
+                    {
+                        List<Kurs> tillfälligStudentKursLista = new List<Kurs>();
+                        student.StudentensKursLista = tillfälligStudentKursLista;
+                        //lägg till tom lista
+                    }
+                    student.StudentensKursLista.Add(Kurs);
+                }
+            }
+
 
 
             List<Laborationsuppgift> Laborationslista = new List<Laborationsuppgift>();
@@ -291,33 +297,43 @@ namespace SkolsystemLaboration2
 
 
 
-            if (valdKurs.BetygLista != null)
-            {
-                foreach (var betyg in valdKurs.BetygLista)
-                {
-                    foreach (var student in valdKurs.StudenterPåKurs)
-                    {
-                        if (valdStudent == betyg.Student)
-                        {
-                            if (betyg.TilldelatBetyg != null)
-                            {
-                                betygLabel.Text = betyg.TilldelatBetyg;
-                            }
-                            else
-                            {
-                                betygLabel.Text = "Inget betyg";
-                            }
+            //Betyg valtBetyg = 
+            
 
-                        }
 
-                    }
-                }
 
-            }
-            else
-            {
-                betygLabel.Text = "Inget betyg";
-            }
+
+            //leta i betygklass
+
+
+            //kolla samma index som StudentensKursLista som BetygLista
+            //if (valdKurs.BetygLista != null)
+            //{
+            //    foreach (var betyg in valdKurs.BetygLista)
+            //    {
+            //        foreach (var student in valdKurs.StudenterPåKurs)
+            //        {
+            //            if (valdStudent == betyg.Student)
+            //            {
+            //                if (betyg.TilldelatBetyg != null)
+            //                {
+            //                    betygLabel.Text = betyg.TilldelatBetyg;
+            //                }
+            //                else
+            //                {
+            //                    betygLabel.Text = "Inget betyg";
+            //                }
+
+            //            }
+
+            //        }
+            //    }
+
+            //}
+            //else
+            //{
+            //    betygLabel.Text = "Inget betyg";
+            //}
 
         }
 
