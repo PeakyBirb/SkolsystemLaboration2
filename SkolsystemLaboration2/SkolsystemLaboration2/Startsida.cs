@@ -297,7 +297,7 @@ namespace SkolsystemLaboration2
                 {
                     foreach (var student in valdKurs.StudenterPåKurs)
                     {
-                        if (student == betyg.Student)
+                        if (valdStudent == betyg.Student)
                         {
                             if (betyg.TilldelatBetyg != null)
                             {

@@ -300,7 +300,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(873, 385);
+            this.label6.Location = new System.Drawing.Point(850, 385);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(115, 16);
             this.label6.TabIndex = 15;
@@ -331,7 +331,7 @@
             // 
             this.betygLabel.AutoSize = true;
             this.betygLabel.ForeColor = System.Drawing.Color.Crimson;
-            this.betygLabel.Location = new System.Drawing.Point(991, 388);
+            this.betygLabel.Location = new System.Drawing.Point(972, 388);
             this.betygLabel.Name = "betygLabel";
             this.betygLabel.Size = new System.Drawing.Size(59, 13);
             this.betygLabel.TabIndex = 33;
@@ -354,7 +354,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 639);
+            this.ClientSize = new System.Drawing.Size(1104, 656);
             this.Controls.Add(this.NyttBetygComboBox);
             this.Controls.Add(this.OkBetygButton);
             this.Controls.Add(this.betygLabel);
