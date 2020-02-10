@@ -8,16 +8,17 @@ namespace SkolsystemLaboration2
 {
     public abstract class Person : IPerson
     {
-		private string id;
-		public string Id { get; set; }
-
-
 		private string förnamn;
 		public string Förnamn { get; set; }
 
 
 		private string efternamn;
 		public string Efternamn { get; set; }
+
+		private string id;
+		public string Id { get; set; }
+
+
 
 	}
 }

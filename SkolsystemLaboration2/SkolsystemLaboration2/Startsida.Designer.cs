@@ -133,7 +133,7 @@
             this.LärareDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LärareDataGrid.Location = new System.Drawing.Point(680, 96);
             this.LärareDataGrid.Name = "LärareDataGrid";
-            this.LärareDataGrid.Size = new System.Drawing.Size(370, 114);
+            this.LärareDataGrid.Size = new System.Drawing.Size(561, 114);
             this.LärareDataGrid.TabIndex = 10;
             this.LärareDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LärareDataGrid_CellContentClick);
             // 
@@ -169,7 +169,7 @@
             // StudentComboBox
             // 
             this.StudentComboBox.FormattingEnabled = true;
-            this.StudentComboBox.Location = new System.Drawing.Point(334, 235);
+            this.StudentComboBox.Location = new System.Drawing.Point(412, 239);
             this.StudentComboBox.Name = "StudentComboBox";
             this.StudentComboBox.Size = new System.Drawing.Size(121, 21);
             this.StudentComboBox.TabIndex = 16;
@@ -187,7 +187,7 @@
             // LärareComboBox
             // 
             this.LärareComboBox.FormattingEnabled = true;
-            this.LärareComboBox.Location = new System.Drawing.Point(737, 236);
+            this.LärareComboBox.Location = new System.Drawing.Point(1013, 234);
             this.LärareComboBox.Name = "LärareComboBox";
             this.LärareComboBox.Size = new System.Drawing.Size(121, 21);
             this.LärareComboBox.TabIndex = 19;
@@ -195,7 +195,7 @@
             // 
             // LäggTillStudent
             // 
-            this.LäggTillStudent.Location = new System.Drawing.Point(473, 231);
+            this.LäggTillStudent.Location = new System.Drawing.Point(551, 235);
             this.LäggTillStudent.Name = "LäggTillStudent";
             this.LäggTillStudent.Size = new System.Drawing.Size(89, 26);
             this.LäggTillStudent.TabIndex = 20;
@@ -205,7 +205,7 @@
             // 
             // LäggTillLärare
             // 
-            this.LäggTillLärare.Location = new System.Drawing.Point(876, 232);
+            this.LäggTillLärare.Location = new System.Drawing.Point(1152, 230);
             this.LäggTillLärare.Name = "LäggTillLärare";
             this.LäggTillLärare.Size = new System.Drawing.Size(89, 26);
             this.LäggTillLärare.TabIndex = 21;
@@ -354,7 +354,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 647);
+            this.ClientSize = new System.Drawing.Size(1295, 647);
             this.Controls.Add(this.NyttBetygComboBox);
             this.Controls.Add(this.OkBetygButton);
             this.Controls.Add(this.betygLabel);
