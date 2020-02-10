@@ -24,9 +24,9 @@ namespace SkolsystemLaboration2
 
         public List<Betyg> BetygLista { get; set; }
 
-        public string StudentFullName()
+        public string StudentFullName
         {
-            return Förnamn + " " + Efternamn;
+            get { return Förnamn + " " + Efternamn; }
         }
 
        

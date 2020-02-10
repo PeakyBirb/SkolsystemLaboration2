@@ -12,7 +12,5 @@ namespace SkolsystemLaboration2
 		string Förnamn { get; set; }
 		string Efternamn { get; set; }
 		
-
-		
 	}
 }

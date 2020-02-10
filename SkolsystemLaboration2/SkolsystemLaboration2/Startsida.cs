@@ -152,7 +152,7 @@ namespace SkolsystemLaboration2
             StudentListBox.DataSource = null;
             StudentListBox.DataSource = studenterPåKurs;
             StudentListBox.ValueMember = "Id";
-            StudentListBox.DisplayMember = "Förnamn";
+            StudentListBox.DisplayMember = "StudentFullName";
 
 
         }
@@ -501,7 +501,7 @@ namespace SkolsystemLaboration2
         {
             StudentListBox.DataSource = null;
             StudentListBox.DataSource = (((Kurs)KursListBox.SelectedItem).StudenterPåKurs);
-            StudentListBox.DisplayMember = "Förnamn";
+            StudentListBox.DisplayMember = "StudentFullName";
         }
 
         private void betygLabel_Click(object sender, EventArgs e)
