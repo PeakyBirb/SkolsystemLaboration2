@@ -6,22 +6,22 @@
       <HashCode>AAACAAAAAQAAAAEAAAAAAAgAAAAIAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Person.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.21" />
   </Class>
   <Class Name="SkolsystemLaboration2.Kurs">
     <Position X="11.5" Y="3" Width="2" />
     <AssociationLine Name="StudenterPåKurs" Type="SkolsystemLaboration2.Student" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="12.083" Y="5.961" />
-        <Point X="12.083" Y="8.438" />
-        <Point X="10.25" Y="8.438" />
+        <Point X="12.083" Y="9.82" />
+        <Point X="10.25" Y="9.82" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="LärarePåKurs" Type="SkolsystemLaboration2.Lärare" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="11.625" Y="5.961" />
-        <Point X="11.625" Y="7.113" />
-        <Point X="10" Y="7.113" />
+        <Point X="11.625" Y="7.137" />
+        <Point X="10" Y="7.137" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="LaborationsuppgifterPåKurs" Type="SkolsystemLaboration2.Laborationsuppgift" FixedFromPoint="true" FixedToPoint="true">
@@ -42,30 +42,30 @@
     </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="SkolsystemLaboration2.Lärare" Collapsed="true">
-    <Position X="8.5" Y="6.75" Width="1.5" />
+  <Class Name="SkolsystemLaboration2.Lärare">
+    <Position X="8.5" Y="6" Width="1.5" />
     <InheritanceLine Type="SkolsystemLaboration2.Person" FixedToPoint="true">
       <Path>
         <Point X="7.75" Y="5.725" />
-        <Point X="7.75" Y="6.375" />
-        <Point X="8.625" Y="6.375" />
-        <Point X="8.625" Y="6.75" />
+        <Point X="7.75" Y="5.846" />
+        <Point X="8.625" Y="5.846" />
+        <Point X="8.625" Y="6" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Lärare.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="SkolsystemLaboration2.Student" Collapsed="true">
-    <Position X="8.75" Y="8.25" Width="1.5" />
+  <Class Name="SkolsystemLaboration2.Student">
+    <Position X="8.25" Y="9.25" Width="2" />
     <InheritanceLine Type="SkolsystemLaboration2.Person" FixedToPoint="true">
       <Path>
         <Point X="7.75" Y="5.725" />
-        <Point X="7.75" Y="7.875" />
-        <Point X="8.875" Y="7.875" />
-        <Point X="8.875" Y="8.25" />
+        <Point X="7.75" Y="8.875" />
+        <Point X="8.417" Y="8.875" />
+        <Point X="8.417" Y="9.25" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -75,7 +75,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SkolsystemLaboration2.Laborationsuppgift">
-    <Position X="15.5" Y="6.75" Width="1.5" />
+    <Position X="15.5" Y="6.75" Width="2" />
     <AssociationLine Name="Kurs" Type="SkolsystemLaboration2.Kurs" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="15.5" Y="8.025" />
@@ -99,7 +99,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SkolsystemLaboration2.Betyg">
-    <Position X="11.25" Y="10" Width="1.5" />
+    <Position X="11.25" Y="10" Width="2" />
     <AssociationLine Name="Kurs" Type="SkolsystemLaboration2.Kurs" FixedToPoint="true">
       <Path>
         <Point X="12.438" Y="10" />
@@ -111,10 +111,10 @@
     </AssociationLine>
     <AssociationLine Name="Laborationsuppgift" Type="SkolsystemLaboration2.Laborationsuppgift" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="12.531" Y="10" />
-        <Point X="12.531" Y="9.625" />
-        <Point X="15.938" Y="9.625" />
-        <Point X="15.938" Y="9.299" />
+        <Point X="12.958" Y="10" />
+        <Point X="12.958" Y="9.625" />
+        <Point X="16.084" Y="9.625" />
+        <Point X="16.084" Y="9.299" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -128,5 +128,47 @@
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
+  <Interface Name="SkolsystemLaboration2.IPerson">
+    <Position X="6.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAEAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPerson.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SkolsystemLaboration2.IKurs">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAIAAAAAAAAAAAAAgAAAAAAAAAACQAAABAAAAAA=</HashCode>
+      <FileName>IKurs.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SkolsystemLaboration2.IStudent">
+    <Position X="5.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAABAAAAAA=</HashCode>
+      <FileName>IStudent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SkolsystemLaboration2.ILärare">
+    <Position X="5.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ILärare.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SkolsystemLaboration2.IBetyg">
+    <Position X="11" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAIAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IBetyg.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SkolsystemLaboration2.ILaborationsuppgift">
+    <Position X="15.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAABAQAAAA=</HashCode>
+      <FileName>ILaborationsuppgift.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9.75" />
 </ClassDiagram>
