@@ -94,15 +94,7 @@ namespace SkolsystemLaboration2
 
         }
         #endregion
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
+        
 
         public void LäggTillNyKurs(string kursID, string kursnamn, List<Student> studenterPåKurs, List<Lärare> lärarePåKurs)
         {
@@ -285,8 +277,6 @@ namespace SkolsystemLaboration2
         {
             Kurs valdKurs = (Kurs)KursListBox.SelectedItem;
             LabDataGrid.DataSource = valdKurs.LaborationsuppgifterPåKurs;
-
-
 
         }
 

@@ -11,7 +11,6 @@ namespace SkolsystemLaboration2
 		private string förnamn;
 		public string Förnamn { get; set; }
 
-
 		private string efternamn;
 		public string Efternamn { get; set; }
 
