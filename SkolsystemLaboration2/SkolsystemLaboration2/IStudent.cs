@@ -10,5 +10,6 @@ namespace SkolsystemLaboration2
     {
         List<Betyg> BetygLista { get; set; }
         List<Kurs> StudentensKursLista { get; set; }
+        string StudentFullName { get; set; }
     }
 }
