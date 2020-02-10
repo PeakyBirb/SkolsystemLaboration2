@@ -15,8 +15,5 @@ namespace SkolsystemLaboration2
         Laborationsuppgift Laborationsuppgift { get; set; }
         Student Student { get; set; }
 
-        
-
-
     }
 }

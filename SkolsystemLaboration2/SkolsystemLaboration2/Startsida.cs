@@ -23,8 +23,6 @@ namespace SkolsystemLaboration2
         }
 
 
-
-
         #region genereraobjekt
         public void GenereraObjekt()
         {
@@ -146,7 +144,6 @@ namespace SkolsystemLaboration2
             StudentListBox.ValueMember = "Id";
             StudentListBox.DisplayMember = "Förnamn";
 
-
         }
 
         public void UppdateraKurser()
@@ -194,8 +191,6 @@ namespace SkolsystemLaboration2
                 nyStudentLista.Add(valdStudent);
                 valdKurs.StudenterPåKurs = nyStudentLista;
             }
-
-
         }
 
         public void UppdateraStudentDataGrid()
